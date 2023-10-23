@@ -14,7 +14,7 @@ title                    : "Wanli Yang's Academics Page"
 title_separator          : "-"
 name                     : &name "Wanli Yang"
 description              : &description "personal description"  # 等待修改
-url                      : https://wending0417.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://yangwl.site # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "wending0417/wending0417.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
