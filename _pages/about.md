@@ -35,7 +35,7 @@ Publications are on the way~
 
   The code replication of [LightGCL: Simple Yet Effective Graph Contrastive Learning for Recommendation](https://arxiv.org/abs/2302.08191), ICLR' 23
 
-- **Creating [NKUSE.ICU](https://nkuse.icu/): 南开大学软件学院生存手册 | A website for sharing information about the College of Software at Nankai University, 7 Stars & 3 Forks**
+- **Creating [NKUSE.ICU](https://nkuse.icu/): 南开大学软件学院生存手册 & A website for sharing information about the College of Software at Nankai University, 7 Stars & 3 Forks**
 
 ## Coursework
 
