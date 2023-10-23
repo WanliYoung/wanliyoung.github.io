@@ -9,7 +9,7 @@ redirect_from:
 
 ---
 
-Hi! I'm a forth-year undergraduate student at Nankai University majoring in Software Engineering. I will be pursuing a Ph.D. at ICT, CAS and be fortunate to be advised by [Prof. Fei Sun](https://ofey.me/). My research interests include Knowledge Editing, NLP, Trustworthy AI, Recommender System.
+Hi! I'm a forth-year undergraduate student at Nankai University majoring in Software Engineering. I will be pursuing a Ph.D. at ICT, CAS and be fortunate to be advised by [Prof. Fei Sun](http://ofey.me/). My research interests include Knowledge Editing, NLP, Trustworthy AI, Recommender System.
 
 ## Publications
 
@@ -19,7 +19,7 @@ Publications are on the way~
 
 - **Research Intern, Renmin University of China**
 
-  12/2022 - 06/2023, [AI Box](https://aibox.ruc.edu.cn/) Lab, advised by [Prof. Wayne Xin Zhao](https://scholar.google.com/citations?user=JNhNacoAAAAJ)
+  12/2022 - 06/2023, [AI Box](http://aibox.ruc.edu.cn/) Lab, advised by [Prof. Wayne Xin Zhao](https://scholar.google.com/citations?user=JNhNacoAAAAJ)
 
 - **Research Intern, Nankai University**
 
