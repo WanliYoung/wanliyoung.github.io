@@ -13,7 +13,7 @@ Hi! I'm a forth-year undergraduate student at Nankai University majoring in Soft
 
 ## Publications
 
-#### Preprint
+### Preprint
 
 - **🦋🌪️ The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse.** [[paper](https://arxiv.org/abs/2402.09656)]<br>
   **<u>Wanli Yang</u>**, Fei Sun, Xinyu Ma, Xun Liu, Dawei Yin, Xueqi Cheng
