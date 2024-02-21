@@ -15,10 +15,10 @@ Hi! I'm a forth-year undergraduate student at Nankai University majoring in Soft
 
 #### Preprint
 
-- **🦋🌪️ The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse.** [[paper](https://arxiv.org/abs/2402.09656)]
+- **🦋🌪️ The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse.** [[paper](https://arxiv.org/abs/2402.09656)]<br>
   **<u>Wanli Yang</u>**, Fei Sun, Xinyu Ma, Xun Liu, Dawei Yin, Xueqi Cheng
 
-- **Blinded by Generated Contexts: How Language Models Merge Generated and Retrieved Contexts for Open-Domain QA?** [[paper](https://arxiv.org/abs/2401.11911)]
+- **Blinded by Generated Contexts: How Language Models Merge Generated and Retrieved Contexts for Open-Domain QA?** [[paper](https://arxiv.org/abs/2401.11911)]<br>
   Hexiang Tan, Fei Sun, **<u>Wanli Yang</u>**, Yuanzhuo Wang, Qi Cao, Xueqi Cheng
 
 ## Experience
