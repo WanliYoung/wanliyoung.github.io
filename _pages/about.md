@@ -13,9 +13,21 @@ Hi! I'm a forth-year undergraduate student at Nankai University majoring in Soft
 
 ## Publications
 
-Publications are on the way~
+#### Preprint
+
+- **🦋🌪️ The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse.** [[paper](https://arxiv.org/abs/2402.09656)]
+
+  **<u>Wanli Yang</u>**, Fei Sun, Xinyu Ma, Xun Liu, Dawei Yin, Xueqi Cheng
+
+- **Blinded by Generated Contexts: How Language Models Merge Generated and Retrieved Contexts for Open-Domain QA?** [[paper](https://arxiv.org/abs/2401.11911)]
+
+  Hexiang Tan, Fei Sun, **<u>Wanli Yang</u>**, Yuanzhuo Wang, Qi Cao, Xueqi Cheng
 
 ## Experience
+
+- **Research Intern, Baidu Inc**
+
+  11/2023 - present, Baidu Search, with [Dr. Xinyu Ma](https://albert-ma.github.io/)
 
 - **Research Intern, Renmin University of China**
 
