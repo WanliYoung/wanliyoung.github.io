@@ -120,7 +120,7 @@
           </div>
 
           <a name="intro">
-            <img src="static/images/intro.png" alt="intro" style="width: 650pt;"/>
+            <img src="static/images/intro.png" alt="intro" style="width: 600pt;"/>
           </a>
         </div>
       </div>
@@ -173,10 +173,10 @@ End teaser video -->
           <div class="Text" style="text-align: left; font-size: medium;">
             <div class="item">
               <a name="Fig1">
-                <img src="static/images/pilot_obs.png" alt="Cross-lingual Consistency of Text Watermark" style="margin: 0 auto;"/>
+                <img src="static/images/pilot_obs.png" alt="Pilot Observation for Model Collapse" style="margin: 0 10%;" width="80%" height="60%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Fig 1: (a) Scatter plot of perplexity for models independently edited by ROME from the original GPT-J, with each point representing a unique edit case in the COUNTERFACT dataset.<br> (b) Average performance with variance on downstream tasks for the top 30 high-perplexity models in Figure 1a, comparing to the original model and random guessing.
+                Figure 1: (a) Scatter plot of perplexity for models independently edited by ROME from the original GPT-J, with each point representing a unique edit case in the COUNTERFACT dataset.<br> (b) Average performance with variance on downstream tasks for the top 30 high-perplexity models in Figure 1a, comparing to the original model and random guessing.
               </h2>
             </div>
             <br>
@@ -196,15 +196,15 @@ End teaser video -->
           <h2 class="title is-3">Perplexity as a Surrogate Metric</h2>
           <div class="Text" style="text-align: left; font-size: medium;">
             <div class="item">
-              <a name="Fig1">
-                <img src="static/images/perplexity.png" alt="Cross-lingual Consistency of Text Watermark" style="margin: 0 auto;"/>
+              <a name="Fig2">
+                <img src="static/images/perplexity.png" alt="Correlations between Perplexity and Performance" style="margin: 0 10%;" width="80%" height="60%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Fig 1: (a) Scatter plot of perplexity for models independently edited by ROME from the original GPT-J, with each point representing a unique edit case in the COUNTERFACT dataset.<br> (b) Average performance with variance on downstream tasks for the top 30 high-perplexity models in Figure 1a, comparing to the original model and random guessing.
+                Figure 2: Correlations between perplexity and downstream task performance across different LLMs, measured by task-specific metrics: Exact Match (EM) for NQ; F1 for SQuAD2.0.; accuracy for others.
               </h2>
             </div>
             <br>
-            As an initial exploration of the impacts caused by editing, we opt to quickly identify a small set of anomalous models produced by each edit, facilitating subsequent investigation. We focus on using ROME to edit GPT-J with perplexity as a tool to detect anomalies. The results reveal that certain samples cause edited models to exhibit extremely high perplexity. Further experiments on the top 30 models with the highest perplexity demonstrate that the downstream task performance of these models is significantly compromised.
+            To assess whether perplexity can serve as a surrogate metric, thereby avoiding the need for costly benchmarking LLMs after each edit, we conduct an in-depth investigation to demonstrate that models with differing levels of perplexity correspond to varying performance in downstream tasks. The results in Figure 2 reveal that an increase in perplexity typically indicates a decline in the model's overall performance.
           </div>
         </div>
       </div>
@@ -212,86 +212,90 @@ End teaser video -->
 </section>
 
 
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Model Collapse Induced by Editing</h2>
+          <h3 class="title is-4" style="text-align: center;">Single Editing</h3>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            <div class="item">
+              <a name="Fig3">
+                <img src="static/images/case.png" alt="Edit Cases Trigger Collapse" style="margin: 0 25%;" width="50%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 3: Examples from COUNTERFACT that induce collapse in corresponding LLMs with a single ROME edit.
+              </h2>
+            </div>
+            <br>
+            Upon examining the perplexity, we find that ROME consistently causes all three LLMs under study (GPT-2-XL, GPT-J, and Llama2-7b) to collapse with a <b>single edit</b> when applied to COUNTERFACT. Examples presented in Figure 4 indicate that, for GPT-2-XL and GPT-J, the samples causing model collapse primarily featuring subjects that are single, commonly used words; for Llama2-7b, the subjects in these challenging cases usually encompass names of individuals or entities, presented in a particular format. 
+            <br>
+            <div class="item">
+              <a name="Fig4">
+                <img src="static/images/param.png" alt="Parameters Variation" style="margin: 0 10%;" width="80%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 4: The absolute difference between the weights of the edited layer (Layers.5.mlp.down_proj) and its original weights for ROME-edited Llama2-7b models.
+              </h2>
+            </div>
+            <br>
+            To uncover the root causes of model collapse, we initiated a preliminary investigation into the parameter changes in edited models. Figure 4 shows that the collapsed model experienced significantly larger parameter changes than the stable edited model.
+          </div>
+          <br>
+          <h3 class="title is-4" style="text-align: center;">Sequential Editing</h3>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            <div class="item">
+              <a name="Fig5">
+                <img src="static/images/seq.png" alt="Sequential Editing Collapse" style="margin: 0 5%;" width="90%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 5: Perplexity evolution over 107 editing iterations for normal and hard cases.
+              </h2>
+            </div>
+            <br>
+            Further experiments in sequential editing reveal that, hard cases from single editing can induce model collapse under nearly all the combinations examined. Conversely, normal cases that are randomly sampled from the rest of COUNTERFACT, do not compromise the integrity of models when edited by ROME and MEMIT.
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </section>
-<!-- End video carousel -->
 
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
+<section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">HardEdit: A Challenging Dataset</h2>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            <div class="item">
+              <a name="Fig6">
+                <img src="static/images/dataval.png" alt="Valdation for HardEdit" style="margin: 0 5%;" width="90%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 6: Perplexity in three LLMs, each edited by four different methods sequentially on the HardEdit dataset.
+              </h2>
+            </div>
+            <br>
+            To further facilitate comprehensive evaluations of future advanced methods, we crafted a challenging dataset, termed HardEdit, based on the patterns derived from the hard cases. Extensive experiments confirm the efficacy of the dataset in identifying the potential risks of editing algorithms.
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+</section>
+
 
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{yang2024butterfly,
+  title={The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse},
+  author={Yang, Wanli and Sun, Fei and Ma, Xinyu and Liu, Xun and Yin, Dawei and Cheng, Xueqi},
+  journal={arXiv preprint arXiv:2402.09656},
+  year={2024}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
