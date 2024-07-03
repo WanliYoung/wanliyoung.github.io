@@ -56,17 +56,17 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://yangwl.site" target="_blank">Wanli Yang</a><sup>1,3</sup>,</span>
+                <a href="https://yangwl.site" target="_blank">Wanli Yang</a><sup>1</sup>,</span>
                 <a href="http://ofey.me" target="_blank">Fei Sun</a><sup>†1</sup>,</span>
-                <a href="https://albert-ma.github.io" target="_blank">Xinyu Ma</a><sup>4</sup>,</span>
+                <a href="https://albert-ma.github.io" target="_blank">Xinyu Ma</a><sup>3</sup>,</span>
                 <a href="https://antiquality.github.io" target="_blank">Xun Liu</a><sup>2</sup>,</span>
-                <a href="https://www.yindawei.com" target="_blank">Dawei Yin</a><sup>4</sup>,</span>
+                <a href="https://www.yindawei.com" target="_blank">Dawei Yin</a><sup>3</sup>,</span>
                 <a href="https://scholar.google.com.hk/citations?user=hY8aLqAAAAAJ&hl=zh-CN&oi=ao" target="_blank">Xueqi Cheng</a><sup>1,2</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <sup>1</sup>CAS Key Laboratory of AI Safety & Security,<br> Institute of Computing Technology, Chinese Academy of Sciences<br> <sup>2</sup>University of Chinese Academy of Sciences<br> <sup>3</sup>Nankai University, <sup>4</sup>Baidu Inc.
+                <sup>1</sup>CAS Key Laboratory of AI Safety,<br> Institute of Computing Technology, Chinese Academy of Sciences<br> <sup>2</sup>University of Chinese Academy of Sciences, <sup>3</sup>Baidu Inc.
               </span>
               <span class="cor-auth"><small><br><sup>†</sup>Corresponding Author</small></span>
             </div>
@@ -165,7 +165,7 @@ End teaser video -->
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Although model editing has shown promise in revising knowledge in Large Language Models (LLMs), its impact on the inherent capabilities of LLMs is often overlooked. In this work, we reveal a critical phenomenon: even a single edit can trigger model collapse, manifesting as significant performance degradation in various benchmark tasks. However, benchmarking LLMs after each edit, while necessary to prevent such collapses, is impractically time-consuming and resource-intensive. To mitigate this, we propose using perplexity as a surrogate metric, validated by extensive experiments demonstrating its strong correlation with downstream tasks performance. We further conduct an in-depth study on sequential editing, a practical setting for real-world scenarios, across various editing methods and LLMs, focusing on hard cases from our previous single edit studies. The results indicate that nearly all examined editing methods result in model collapse after only few edits. To facilitate further research, we have utilized GPT-3.5 to develop a new dataset, HardEdit, based on those hard cases. This dataset aims to establish the foundation for pioneering research in reliable model editing and the mechanisms underlying editing-induced model collapse. We hope this work can draw the community's attention to the potential risks inherent in model editing practices.
+            Although model editing has shown promise in revising knowledge in Large Language Models (LLMs), its impact on the inherent capabilities of LLMs is often overlooked. In this work, we reveal a critical phenomenon: even a single edit can trigger model collapse, manifesting as significant performance degradation in various benchmark tasks. However, benchmarking LLMs after each edit, while necessary to prevent such collapses, is impractically time-consuming and resource-intensive. To mitigate this, we propose using perplexity as a surrogate metric, validated by extensive experiments demonstrating changes in an edited model's perplexity are strongly correlated with its downstream task performances. We further conduct an in-depth study on sequential editing, a practical setting for real-world scenarios, across various editing methods and LLMs, focusing on hard cases from our previous single edit studies. The results indicate that nearly all examined editing methods result in model collapse after only few edits. To facilitate further research, we have utilized GPT-3.5 to develop a new dataset, HardEdit, based on those hard cases. This dataset aims to establish the foundation for pioneering research in reliable model editing and the mechanisms underlying editing-induced model collapse. We hope this work can draw the community's attention to the potential risks inherent in model editing practices.
           </p>
         </div>
       </div>
@@ -211,7 +211,7 @@ End teaser video -->
                 <img src="static/images/perplexity.png" alt="Correlations between Perplexity and Performance" style="margin: 0 10%;" width="80%" height="60%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Figure 2: Correlations between perplexity and downstream task performance across different LLMs, measured by task-specific metrics: Exact Match (EM) for NQ; F1 for SQuAD2.0.; accuracy for others.
+                Figure 2: Correlations between perplexity and downstream task performance across different LLMs, measured by task-specific metrics: Exact Match (EM) for NQ; F1 for SQuAD2.0.; Accuracy for remaining tasks. ρ refers to the Spearman's Rho value, measuring the rank correlation between perplexity and corresponding downstream task performance, with all p-values < 0.01.
               </h2>
             </div>
             <br>
@@ -236,22 +236,22 @@ End teaser video -->
                 <img src="static/images/case.png" alt="Edit Cases Trigger Collapse" style="margin: 0 25%;" width="50%" height="20%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Figure 3: Examples from COUNTERFACT that induce collapse in corresponding LLMs with a single ROME edit.
+                Table 1: Examples of HardCF that induce collapse in corresponding LLMs through a single ROME edit, with the "Normal" row showcasing other normal cases from COUNTERFACT for contrast.
               </h2>
             </div>
             <br>
-            Upon examining the perplexity, we find that ROME consistently causes all three LLMs under study (GPT-2-XL, GPT-J, and Llama2-7b) to collapse with a <b>single edit</b> when applied to COUNTERFACT. Examples presented in Figure 4 indicate that, for GPT-2-XL and GPT-J, the samples causing model collapse primarily featuring subjects that are single, commonly used words; for Llama2-7b, the subjects in these challenging cases usually encompass names of individuals or entities, presented in a particular format. 
+            Upon examining the perplexity, we find that ROME consistently causes all three LLMs under study (GPT-2-XL, GPT-J, and Llama2-7b) to collapse with a <b>single edit</b> when applied to COUNTERFACT. Examples presented in Table 1 indicate that, for GPT-2-XL and GPT-J, the samples causing model collapse primarily featuring subjects that are single, commonly used words; for Llama2-7b, the subjects in these challenging cases usually encompass names of individuals or entities, presented in a particular format. 
             <br>
             <div class="item">
               <a name="Fig4">
                 <img src="static/images/param.png" alt="Parameters Variation" style="margin: 0 10%;" width="80%" height="60%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Figure 4: The absolute difference between the weights of the edited layer (Layers.5.mlp.down_proj) and its original weights for ROME-edited Llama2-7b models.
+                Figure 3: The absolute difference between the weights of the edited layer (Layers.5.mlp.down_proj) and its original weights for ROME-edited Llama2-7b models.
               </h2>
             </div>
             <br>
-            To uncover the root causes of model collapse, we initiated a preliminary investigation into the parameter changes in edited models. Figure 4 shows that the collapsed model experienced significantly larger parameter changes than the stable edited model.
+            To uncover the root causes of model collapse, we initiated a preliminary investigation into the parameter changes in edited models. Figure 3 shows that the collapsed model experienced significantly larger parameter changes than the stable edited model.
           </div>
           <br>
           <h3 class="title is-4" style="text-align: center;">Sequential Editing</h3>
@@ -261,7 +261,7 @@ End teaser video -->
                 <img src="static/images/seq.png" alt="Sequential Editing Collapse" style="margin: 0 5%;" width="90%" height="20%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Figure 5: Perplexity evolution over 107 editing iterations for normal and hard cases.
+                Figure 4: Perplexity evolution over 107 editing iterations for normal and hard cases. The y-axes are tailored for each subplot accordingly due to the the significant variation in the magnitude of perplexity changes.
               </h2>
             </div>
             <br>
@@ -285,7 +285,7 @@ End teaser video -->
                 <img src="static/images/dataval.png" alt="Valdation for HardEdit" style="margin: 0 5%;" width="90%" height="60%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Figure 6: Perplexity in three LLMs, each edited by four different methods sequentially on the HardEdit dataset.
+                Figure 5: Perplexity in three LLMs, each edited by four different methods sequentially on the HardEdit dataset.
               </h2>
             </div>
             <br>
@@ -301,11 +301,12 @@ End teaser video -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{yang2024butterfly,
+      <pre><code>@inproceedings{yang2024butterfly,
   title={The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse},
-  author={Yang, Wanli and Sun, Fei and Ma, Xinyu and Liu, Xun and Yin, Dawei and Cheng, Xueqi},
-  journal={arXiv preprint arXiv:2402.09656},
-  year={2024}
+  author={Wanli Yang and Fei Sun and Xinyu Ma and Xun Liu and Dawei Yin and Xueqi Cheng},
+  booktitle={The 62nd Annual Meeting of the Association for Computational Linguistics},
+  year={2024},
+  url={https://openreview.net/forum?id=r07DBA0gAZ}
 }</code></pre>
     </div>
 </section>
