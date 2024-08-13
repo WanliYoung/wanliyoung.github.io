@@ -11,6 +11,12 @@ redirect_from:
 
 Hi! I'm a forth-year undergraduate student at Nankai University majoring in Software Engineering. I will be pursuing a Ph.D. at ICT, CAS and be fortunate to be advised by [Prof. Fei Sun](http://ofey.me/). My research interests include Knowledge Editing, NLP, Trustworthy AI, Recommender System.
 
+## Preprint
+
+### 2024
+
+- **The Fall of ROME: Understanding the Collapse of LLMs in Model Editing.** [[Paper](https://arxiv.org/abs/2406.11263)] <br>**<u>Wanli Yang</u>**, Fei Sun, Jiajun Tan, Xinyu Ma, Du Su, Dawei Yin, Huawei Shen
+
 ## Publications
 
 ### 2024
