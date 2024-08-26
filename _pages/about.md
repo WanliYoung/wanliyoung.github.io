@@ -21,10 +21,10 @@ Hi! I'm a forth-year undergraduate student at Nankai University majoring in Soft
 
 ### 2024
 
-- **🦋🌪️ The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse.** [[Paper](https://arxiv.org/abs/2402.09656)] [[Code](https://github.com/WLYangICT/Collapse-in-Model-Editing)] [[Website](https://yangwl.site/collapse-in-model-editing)] <br>
+- **🦋🌪️ The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse.** [[Paper](https://aclanthology.org/2024.findings-acl.322.pdf)] [[Code](https://github.com/WLYangICT/Collapse-in-Model-Editing)] [[Website](https://yangwl.site/collapse-in-model-editing)] <br>
   **<u>Wanli Yang</u>**, Fei Sun, Xinyu Ma, Xun Liu, Dawei Yin, Xueqi Cheng <br>
   **ACL 2024 Findings**
-- **Blinded by Generated Contexts: How Language Models Merge Generated and Retrieved Contexts for Open-Domain QA?** [[Paper](https://arxiv.org/abs/2401.11911)]<br>
+- **Blinded by Generated Contexts: How Language Models Merge Generated and Retrieved Contexts When Knowledge Conflicts?** [[Paper](https://aclanthology.org/2024.acl-long.337.pdf)]<br>
   Hexiang Tan, Fei Sun, **<u>Wanli Yang</u>**, Yuanzhuo Wang, Qi Cao, Xueqi Cheng <br>
   **ACL 2024**
 
