@@ -27,32 +27,26 @@ Hi! I'm a first-year PhD student at Institute of Computing Technology, Chinese A
 
 ## Experience
 
-- **Research Intern, Baidu Inc**
-
+- **Research Intern, Baidu Inc** <br>
   11/2023 - present, Baidu Search, with [Dr. Xinyu Ma](https://albert-ma.github.io/)
 
-- **Research Intern, Renmin University of China**
-
+- **Research Intern, Renmin University of China** <br>
   12/2022 - 06/2023, [AI Box](http://aibox.ruc.edu.cn/) Lab, advised by [Prof. Wayne Xin Zhao](https://scholar.google.com/citations?user=JNhNacoAAAAJ)
 
-- **Research Intern, Nankai University**
-
+- **Research Intern, Nankai University** <br>
   10/2022 - 02/2023, [AIOps@NKU](https://nkcs.iops.ai/) Lab, advised by [Prof. Shenglin Zhang](https://nkcs.iops.ai/shenglinzhang/)
 
 ## Project
 
-- **Contributing to [RecBole](https://github.com/RUCAIBox/RecBole): A unified, comprehensive and efficient recommendation library (github.com), 2.9k Stars**
-
+- **Contributing to [RecBole](https://github.com/RUCAIBox/RecBole): A unified, comprehensive and efficient recommendation library (github.com), 2.9k Stars** <br>
   The code replication of [Directed Acyclic Graph Factorization Machines for CTR Prediction via Knowledge Distillation](https://arxiv.org/abs/2211.11159), WSDM' 23
 
-- **Contributing to [RecBole-GNN](https://github.com/RUCAIBox/RecBole-GNN): Efficient and extensible GNNs enhanced recommender library based on RecBole (github.com), 126 Stars**
-
+- **Contributing to [RecBole-GNN](https://github.com/RUCAIBox/RecBole-GNN): Efficient and extensible GNNs enhanced recommender library based on RecBole (github.com), 126 Stars** <br>
   The code replication of [LightGCL: Simple Yet Effective Graph Contrastive Learning for Recommendation](https://arxiv.org/abs/2302.08191), ICLR' 23
 
 - **Creating [NKUSE.ICU](https://nkuse.icu/): 南开大学软件学院生存手册 & A website for sharing information about the College of Software at Nankai University, 19 Stars & 4 Forks**
 
 ## Coursework
 
-- **Parallel Programming, taught by [prof. Gang Wang](https://cc.nankai.edu.cn/2021/0323/c13619a490377/page.htm) [[Course Project]](https://github.com/wending0417/NKCS-ParallelProgramming)**
-
+- **Parallel Programming, taught by [prof. Gang Wang](https://cc.nankai.edu.cn/2021/0323/c13619a490377/page.htm) [[Course Project]](https://github.com/wending0417/NKCS-ParallelProgramming)** <br>
   Aiming at the parallel optimization of Inverted Index Intersection utilizing SIMD, Pthread, OpenMP, MPI, and CUDA
