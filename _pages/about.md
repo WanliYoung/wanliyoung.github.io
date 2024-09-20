@@ -9,18 +9,15 @@ redirect_from:
 
 ---
 
-Hi! I'm a forth-year undergraduate student at Nankai University majoring in Software Engineering. I will be pursuing a Ph.D. at ICT, CAS and be fortunate to be advised by [Prof. Fei Sun](http://ofey.me/). My research interests include Knowledge Editing, NLP, Trustworthy AI, Recommender System.
-
-## Preprint
-
-### 2024
-
-- **The Fall of ROME: Understanding the Collapse of LLMs in Model Editing.** [[Paper](https://arxiv.org/abs/2406.11263)] <br>**<u>Wanli Yang</u>**, Fei Sun, Jiajun Tan, Xinyu Ma, Du Su, Dawei Yin, Huawei Shen
+Hi! I'm a first-year PhD student at Institute of Computing Technology, Chinese Academy of Sciences (ICT, CAS), fortunate to be advised by [Prof. Fei Sun](http://ofey.me/). Previously, I obtained my B.E. in Software Engineering from Nankai University. My research interests include Knowledge Editing, NLP, Trustworthy AI, and Recommender System.
 
 ## Publications
 
 ### 2024
 
+- **The Fall of ROME: Understanding the Collapse of LLMs in Model Editing.** [[Paper](https://arxiv.org/abs/2406.11263)] <br>
+  **<u>Wanli Yang</u>**, Fei Sun, Jiajun Tan, Xinyu Ma, Du Su, Dawei Yin, Huawei Shen <br>
+  **EMNLP 2024 Findings**
 - **🦋🌪️ The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse.** [[Paper](https://aclanthology.org/2024.findings-acl.322.pdf)] [[Code](https://github.com/WLYangICT/Collapse-in-Model-Editing)] [[Website](https://yangwl.site/collapse-in-model-editing)] <br>
   **<u>Wanli Yang</u>**, Fei Sun, Xinyu Ma, Xun Liu, Dawei Yin, Xueqi Cheng <br>
   **ACL 2024 Findings**
@@ -52,7 +49,7 @@ Hi! I'm a forth-year undergraduate student at Nankai University majoring in Soft
 
   The code replication of [LightGCL: Simple Yet Effective Graph Contrastive Learning for Recommendation](https://arxiv.org/abs/2302.08191), ICLR' 23
 
-- **Creating [NKUSE.ICU](https://nkuse.icu/): 南开大学软件学院生存手册 & A website for sharing information about the College of Software at Nankai University, 7 Stars & 3 Forks**
+- **Creating [NKUSE.ICU](https://nkuse.icu/): 南开大学软件学院生存手册 & A website for sharing information about the College of Software at Nankai University, 19 Stars & 4 Forks**
 
 ## Coursework
 
