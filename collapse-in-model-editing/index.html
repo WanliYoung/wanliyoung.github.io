@@ -43,6 +43,28 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+    .elegant-text-box {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 100%;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      text-align: left;
+      background-color: #fafafa;
+    }
+    .elegant-text-box h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .elegant-text-box p {
+      color: #666;
+    }
+  </style>
 </head>
 <body>
 
@@ -52,7 +74,18 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">&#x1F98B;&#x1F32A; The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse</h1>
+            <h1 class="title is-1 publication-title">Collapse in Model Editing</h1>
+            <div class="elegant-text-box">
+              Model editing has shown promise in revising knowledge in Large Language Models. 
+              However, its impact on the inherent capabili-ties of LLMs is often overlooked. 
+              In this project, we delved into this issue, yielding two publications. 
+              <a href="#acl-label">The first paper</a> uncovers the phenomenon that model editing may lead to model collapse and proposes employing perplexity as a diagnostic tool (<b>accepted at Findings of ACL2024</b>). 
+              <a href="#emnlp-label">The second paper</a> investigates the underlying causes of LLMs collapse triggered by the SOTA method ROME, and introduces an effective solution (<b>accepted at Findings of EMNLP2024</b>).<br>
+              <b>The papers, source code, datasets, and comprehensive illustration are available on this website</b>.
+            </div>            
+            <br>
+            <h1 class="title is-3 publication-title" id="acl-label">&#x1F98B;&#x1F32A; The Butterfly Effect of Model Editing:<br>Few Edits Can Trigger Large Language Models Collapse</h1>
+            <h4 class="title is-4 publication-title">ACL2024 Findings</h4>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -64,7 +97,7 @@
                 <a href="https://scholar.google.com.hk/citations?user=hY8aLqAAAAAJ&hl=zh-CN&oi=ao" target="_blank">Xueqi Cheng</a><sup>1,2</sup></span>
             </div>
 
-            <div class="is-size-5 publication-authors">
+            <div class="is-size-6 publication-authors">
               <span class="author-block">
                 <sup>1</sup>CAS Key Laboratory of AI Safety,<br> Institute of Computing Technology, Chinese Academy of Sciences<br> <sup>2</sup>University of Chinese Academy of Sciences, <sup>3</sup>Baidu Inc.
               </span>
@@ -296,6 +329,363 @@ End teaser video -->
 </section>
 
 
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">          
+          <h1 class="title is-3 publication-title" id="emnlp-label">
+            <img src="./static/images/rome.png" alt="罗马" style="width:35px;height:35px;">&nbsp;
+            The Fall of <i>ROME</i> :<br>Understanding the Collapse of LLMs in Model Editing
+          </h1>
+          <h4 class="title is-4 publication-title">EMNLP2024 Findings</h4>
+          <div class="is-size-5 publication-authors">
+            <!-- Paper authors -->
+            <span class="author-block">
+              <a href="https://yangwl.site" target="_blank">Wanli Yang</a><sup>1,2</sup>,</span>
+              <a href="http://ofey.me" target="_blank">Fei Sun</a><sup>†1</sup>,</span>
+              <a href="https://sumsky21.github.io" target="_blank">Jiajun Tan</a><sup>1</sup>,</span>
+              <a href="https://albert-ma.github.io" target="_blank">Xinyu Ma</a><sup>3</sup>,</span>
+              <a href="" target="_blank">Du Su</a><sup>1</sup>,</span>
+              <a href="https://www.yindawei.com" target="_blank">Dawei Yin</a><sup>3</sup>,</span>
+              <a href="http://www.bigdatalab.ac.cn/~shenhuawei/" target="_blank">Huawei Shen</a><sup>1,2</sup></span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">
+              <sup>1</sup>CAS Key Laboratory of AI Safety,<br> Institute of Computing Technology, Chinese Academy of Sciences<br> <sup>2</sup>University of Chinese Academy of Sciences, <sup>3</sup>Baidu Inc.
+            </span>
+            <span class="cor-auth"><small><br><sup>†</sup>Corresponding Author</small></span>
+          </div>
+
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                       <!-- Arxiv PDF link -->
+                    <span class="link-block">
+                      <a href="https://arxiv.org/pdf/2406.11263" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <!-- Supplementary PDF link 
+                  <span class="link-block">
+                    <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Supplementary</span>
+                  </a>
+                </span> -->
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/WanliYoung/Collapse-in-Model-Editing" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+                <!-- Google Drive link -->
+                <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1awv48dbYW5X2t51ebB8yE_4VPE_j8-qs?usp=sharing" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Data</span>
+                </a>
+              </span>
+
+              <!-- ArXiv abstract Link -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2406.11263" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="ai ai-arxiv"></i>
+                </span>
+                <span>ArXiv</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Despite significant progress in model editing methods, their application in real-world scenarios remains challenging as they often cause large language models (LLMs) to collapse. Among them, ROME is particularly concerning, as it could disrupt LLMs with only a single edit. In this paper, we study the root causes of such collapse. Through extensive analysis, we identify two primary factors that contribute to the collapse: i) inconsistent handling of prefixed and unprefixed keys in the parameter update equation may result in very small denominators, causing excessively large parameter updates; ii) the subject of collapse cases is usually the first token, whose unprefixed key distribution significantly differs from the prefixed key distribution in autoregressive transformers, causing the aforementioned issue to materialize. To validate our findings, we propose a simple yet effective approach: uniformly using prefixed keys during editing phase and adding prefixes during testing phase to ensure the consistency between training and testing. The experimental results show that the proposed solution can prevent model collapse while maintaining the effectiveness of the edits.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3"><b>R</b>ank-<b>O</b>ne <b>M</b>odel <b>E</b>diting</h2>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            <div class="item">
+              <a name="Fig7">
+                <img src="static/images/rome_method.png" alt="ROME Illustration" style="margin: 0 0;" width="100%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 1: To update "the president of the United States" from "Donald Trump" to "Joe Biden", ROME locates the knowledge into the MLP module within a specific transformer block using the Causal Tracing mechanism. 
+                It then adjusts the second layer of MLP (i.e., weight matrix <i>W</i> ) to change the value <b><i>v</i></b> for the key <b><i>k</i></b> that represents the subject "the United States" to a new value <b><i>v</i></b>, thereby inducing the LLMs to predict the target object "Joe Biden".
+              </h2>
+            </div>
+            <br>
+            ROME models and edits the knowledge in a key-value format. For a prompt constructed from the subject <i>s</i> and relation <i>r</i> :
+            <ul>
+              <li>- Subject <i>s</i> forms a <b>key</b> <b><i>k</i></b> within a specific MLP;</li>
+              <li>- Corresponding output forms a <b>value</b> <b><i>v</i></b> to induce the prediction of object <i>o</i>.</li>
+              <li>- ROME modifies the <b>value</b> <b><i>v</i></b> to edit the object <i>o</i> to <i>o*</i>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Why Does ROME Cause LLMs Collapse?</h2>
+          <h3 class="title is-4" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+            <img src="./static/images/[疑问].png" alt="疑问" style="width:32px; height:32px;">&nbsp;
+            Why is the update matrix so large?
+          </h3>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            Our previous work "<i>The Butterfly Effect of Model Editing</i> " has found that <b>the collapse is caused by the values of update matrix ∆ being excessively large</b>.
+            For fine-grained analysis, we split ∆ into <i>numerator</i> (a matrix) and <i>denominator</i> (a scalar) to analyze the intermediate values for parameter updating.
+            Results reveal that <b>the denominators of collapse cases are two orders of magnitude smaller than those of normal cases</b>, leading to exceptionally large ∆.
+            <br>
+            <div class="item">
+              <a name="Fig8">
+                <img src="static/images/eq1.png" alt="EQ 1" style="margin: 0 30%;" width="40%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Eq 1: Parameter update equation of ROME.
+              </h2>
+              <a name="Fig9">
+                <img src="static/images/denominator.png" alt="EQ 1" style="margin: 0 15%;" width="70%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Table 1: Average norm of the numerator and average absolute value of the denominator in ROME's update matrix ∆ across various LLMs for different sets of cases.
+              </h2>
+            </div>
+          </div>
+          <br>
+
+          <h3 class="title is-4" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+            <img src="./static/images/[疑问].png" alt="疑问" style="width:32px; height:32px;">&nbsp;
+            Why does the denominator show anomaly?
+          </h3>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            The results guide our focus to the key within the denominator, given that the matrix <i>C</i> is a constant.
+            We found the official implementation of ROME adopts inconsistent keys in editing.<br>
+            Ideally, all keys should be an <b>average vector derived from various contexts</b>.
+            <div class="item">
+              <a name="Fig5">
+                <img src="static/images/eq2.png" alt="Sequential Editing Collapse" style="margin: 0 35%;" width="30%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Eq 2: Keys with various prefixes to simulate different contexts.
+              </h2>
+            </div>
+            However, in some positions, the keys utilize a <b>representation over the subject <i>s</i> without any prefix</b>, denoted as k<sup>u</sup>.
+            <div class="item">
+              <a name="Fig5">
+                <img src="static/images/eq3.png" alt="Sequential Editing Collapse" style="margin: 0 42.5%;" width="15%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Eq 3: Keys without any prefixes to represent the subject.
+              </h2>
+            </div>
+            The update matrix ∆ in the original code is:
+            <div class="item">
+              <a name="Fig5">
+                <img src="static/images/eq4.png" alt="Sequential Editing Collapse" style="margin: 0 30%;" width="40%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Eq 4: Update matrix in the original code implementation of ROME.
+              </h2>
+            </div>
+          </div>
+          <br>
+
+          <h3 class="title is-4" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+            <img src="./static/images/[疑问].png" alt="疑问" style="width:32px; height:32px;">&nbsp;
+            Does the collapse really originate from inconsistent keys?
+          </h3>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            To verify if this inconsistency of keys is responsible for the collapse, we substitute all unprefixed keys with prefixed keys in the implementation. 
+            <b>The aligned implementation is referred to as <i>Consistent-ROME</i>, <i>C-ROME</i> for short.</b>
+            C-ROME avoids collapse, validating <b>inconsistent keys do lead to collapse</b>.
+            <div class="item">
+              <br>
+              <a name="Fig5">
+                <img src="static/images/c_rome.png" alt="Sequential Editing Collapse" style="margin: 0 20%;" width="60%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Table 2: Maximum perplexity of models edited by different implementations of ROME.
+              </h2>
+            </div>
+          </div>
+          <br>
+
+          <h3 class="title is-4" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+            <img src="./static/images/[疑问].png" alt="疑问" style="width:32px; height:32px;">&nbsp;
+            Why do inconsistent keys only fail in collapse cases?
+          </h3>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            While unifying the keys as prefixed one can prevent model collapse, it remains unclear <i>why inconsistent keys only encounter issues in collapse cases</i>.
+            To enhance intuitive understanding, we analyze the spatial distribution of C<sup>-1</sup>k and k<sup>u</sup> in the denominator for different cases.
+            In the denominator, these two elements show no difference in normal cases, yet <b>they exhibit significant divergence in collapse cases</b>.
+            Considering C is a constant, <b>the collapse actually stems from the significant divergence between k and k<sup>u</sup></b>.
+            <div class="item">
+              <br>
+              <a name="Fig5">
+                <img src="static/images/keys_rep.png" alt="Sequential Editing Collapse" style="margin: 0 10%;" width="80%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 2: (a) Elements in the denominator; (b) Different implementation of key vectors.
+              </h2>
+            </div>
+          </div>
+          <br>
+          
+          <h3 class="title is-4" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+            <img src="./static/images/[疑问].png" alt="疑问" style="width:32px; height:32px;">&nbsp;
+            Why is unprefixed key distributed anomalously?
+          </h3>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            To elucidate the anomalous distribution of k<sup>u</sup> in collapse cases, we focus our analysis on their characteristics. 
+            A common pattern is observed in the collapse cases for both GPT-2-XL and GPT-J: <i>the subjects is encoded and positioned as the first token of the prompt</i>.
+            That is <b>k<sup>u</sup> in collapse cases corresponds to the first token in the inputs</b>.
+            <div class="item">
+              <br>
+              <a name="Fig5">
+                <img src="static/images/collapse_example.png" alt="Sequential Editing Collapse" style="margin: 0 15%;" width="70%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 3: Examples of collapse cases.
+              </h2>
+            </div>
+          </div>
+          <br>
+
+          <h3 class="title is-4" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+            <img src="./static/images/[疑问].png" alt="疑问" style="width:32px; height:32px;">&nbsp;
+            Does representation of first token possess specificity?
+          </h3>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            We explore this from two aspect: (a) examine the representation distribution of the <b>first tokens in the prompts for normal cases</b>; (b) prefix the prompts of collapse cases with randomly sampled texts to <b>shift k<sup>u</sup> away from the first position</b>.
+            The results reveal that: (a) the <b>first tokens of normal cases consistently exhibit an abnormal distribution</b> similar to that of k<sup>u</sup> in collapse cases; (b) distribution of <b>prefixed k<sup>u</sup> aligns with that of normal cases</b>.
+            Both the findings demonstrate that the first token's representation is distributed differently.
+            <div class="item">
+              <br>
+              <a name="Fig5">
+                <img src="static/images/first_token.png" alt="Sequential Editing Collapse" style="margin: 0 10%;" width="80%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 4: (a) First token in normal prompts; (b) k<sup>u</sup> in prefixed collapse prompts.
+              </h2>
+            </div>
+          </div>
+          <br>
+
+          <h3 class="title is-4" style="text-align: center; display: flex; align-items: center; justify-content: center;">
+            <img src="./static/images/[疑问].png" alt="疑问" style="width:32px; height:32px;">&nbsp;
+            Why does the first token have a different representation?
+          </h3>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            To elucidate the underlying reasons for the anomalous distribution of the first token in autoregressive language models, we explored two potential factors.<br>
+            Firstly, we speculate that this phenomenon may arise from the <span style="color: red;"><b>inherent nature of autoregressive models</b></span>, where <b>the first token cannot interact with any other token except itself</b>.
+            As a counterexample with non-autoregressive architecture, the representation distribution of the <b>first token in T5-3B encoder does not differ from that of subsequent tokens</b>.<br>
+            Secondly, considering the specificity of the first token may originate from its position embedding, we verify it from two aspects.
+            For <i>collapse cases</i> where the subjects are the first tokens, setting the position embedding of the <b>first token as that of the second token can not completely eliminate collapse</b>. 
+            While for <i>normal cases</i> where the subjects are the second tokens, replicating the position embedding of the <b>first token onto the second token does not consistently lead to collapse</b>.
+            These findings suggest that while <span style="color: red;"><b>position embedding plays a role</b></span>, it is not the only determining factor.
+            <div class="item">
+              <br>
+              <a name="Fig5">
+                <img src="static/images/reason4first.png" alt="Sequential Editing Collapse" style="margin: 0 10%;" width="80%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figure 5: First token in T5-3B. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Table 3: Impact of position embedding.
+              </h2>
+            </div>
+          </div>
+          <br>
+
+      </div>
+    </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">A Simple Solution to Avoid Collapse</h2>
+          <div class="Text" style="text-align: left; font-size: medium;">
+            C-ROME can effectively keep the stability of edited models, but <b>it fails to successfully integrate target knowledge into the model</b>, as evidenced by its low <i>efficacy</i> and <i>generalization</i> on collapse cases.
+            <br><br>
+            <div class="item">
+              <a name="Fig7">
+                <img src="static/images/low_efficacy.png" alt="ROME Illustration" style="margin: 0 22.5%;" width="55%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Table 4: Performance of C-ROME on various LLMs for corresponding collapse cases.
+              </h2>
+            </div>
+            <br>
+            <b>This failure arises from the inconsistency of C-ROME between editing and testing</b>. 
+            Specifically, C-ROME employs prefixed keys only when editing, while during testing, the prompts used to evaluate efficacy adopt unprefixed keys.
+            To address this issue, we propose a straightforward solution, which <b>appends a random prefix</b>, drawn from those utilized in the editing process, <b>to the prompt of collapse cases during the testing phase</b>.
+            The results demonstrate that this method significantly improves the efficacy for GPT-2-XL, GPT-J, and Llama2-7b.
+            <br><br>
+            <div class="item">
+              <a name="Fig7">
+                <img src="static/images/enhance_c_rome.png" alt="ROME Illustration" style="margin: 0 20%;" width="60%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Table 5: Performance of C-ROME, enhanced by prefixing random texts to the prompts of collapse cases during testing.
+              </h2>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
@@ -320,7 +710,18 @@ End teaser video -->
     url = "https://aclanthology.org/2024.findings-acl.322",
     pages = "5419--5437",
     abstract = "Although model editing has shown promise in revising knowledge in Large Language Models (LLMs), its impact on the inherent capabilities of LLMs is often overlooked. In this work, we reveal a critical phenomenon: even a single edit can trigger model collapse, manifesting as significant performance degradation in various benchmark tasks. However, benchmarking LLMs after each edit, while necessary to prevent such collapses, is impractically time-consuming and resource-intensive. To mitigate this, we propose using perplexity as a surrogate metric, validated by extensive experiments demonstrating changes in an edited model{'}s perplexity are strongly correlated with its downstream task performances. We further conduct an in-depth study on sequential editing, a practical setting for real-world scenarios, across various editing methods and LLMs, focusing on hard cases from our previous single edit studies. The results indicate that nearly all examined editing methods result in model collapse after only few edits. To facilitate further research, we have utilized GPT-3.5 to develop a new dataset, HardEdit, based on those hard cases. This dataset aims to establish the foundation for pioneering research in reliable model editing and the mechanisms underlying editing-induced model collapse. We hope this work can draw the community{'}s attention to the potential risks inherent in model editing practices.",
-}</code></pre>
+}
+
+@misc{yang2024understandingcollapsellmsmodel,
+  title={Understanding the Collapse of LLMs in Model Editing}, 
+  author={Wanli Yang and Fei Sun and Jiajun Tan and Xinyu Ma and Du Su and Dawei Yin and Huawei Shen},
+  year={2024},
+  eprint={2406.11263},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2406.11263}, 
+}
+</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
