@@ -13,17 +13,23 @@ Hi! I'm a first-year PhD student at Institute of Computing Technology, Chinese A
 
 ## Publications
 
+### 2025
+
+- **The Mirage of Model Editing: Revisiting Evaluation in the Wild.** [[Paper](https://arxiv.org/pdf/2502.11177)] [[Code](https://github.com/WanliYoung/Revisit-Editing-Evaluation)] <br>
+  **<u>Wanli Yang</u>**, Fei Sun, Jiajun Tan, Xinyu Ma, Qi Cao, Dawei Yin, Huawei Shen, Xueqi Cheng <br>
+  **ACL 2025 Main**
+
 ### 2024
 
-- **The Fall of ROME: Understanding the Collapse of LLMs in Model Editing.** [[Paper](https://arxiv.org/abs/2406.11263)] [[Code](https://github.com/WLYangICT/Collapse-in-Model-Editing)] [[Website](https://yangwl.site/collapse-in-model-editing)] <br>
+- **The Fall of ROME: Understanding the Collapse of LLMs in Model Editing.** [[Paper](https://aclanthology.org/2024.findings-emnlp.236.pdf)] [[Code](https://github.com/WanliYoung/Collapse-in-Model-Editing)] [[Website](https://yangwl.site/collapse-in-model-editing)] <br>
   **<u>Wanli Yang</u>**, Fei Sun, Jiajun Tan, Xinyu Ma, Du Su, Dawei Yin, Huawei Shen <br>
   **EMNLP 2024 Findings**
-- **🦋🌪️ The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse.** [[Paper](https://aclanthology.org/2024.findings-acl.322.pdf)] [[Code](https://github.com/WLYangICT/Collapse-in-Model-Editing)] [[Website](https://yangwl.site/collapse-in-model-editing)] <br>
+- **🦋🌪️ The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse.** [[Paper](https://aclanthology.org/2024.findings-acl.322.pdf)] [[Code](https://github.com/WanliYoung/Collapse-in-Model-Editing)] [[Website](https://yangwl.site/collapse-in-model-editing)] <br>
   **<u>Wanli Yang</u>**, Fei Sun, Xinyu Ma, Xun Liu, Dawei Yin, Xueqi Cheng <br>
   **ACL 2024 Findings**
 - **Blinded by Generated Contexts: How Language Models Merge Generated and Retrieved Contexts When Knowledge Conflicts?** [[Paper](https://aclanthology.org/2024.acl-long.337.pdf)]<br>
   Hexiang Tan, Fei Sun, **<u>Wanli Yang</u>**, Yuanzhuo Wang, Qi Cao, Xueqi Cheng <br>
-  **ACL 2024**
+  **ACL 2024 Main**
 
 ## Experience
 
