@@ -33,8 +33,11 @@ Hi! I'm a first-year PhD student at Institute of Computing Technology, Chinese A
 
 ## Experience
 
-- **Research Intern, Baidu Inc** <br>
-  11/2023 - present, Baidu Search, with [Dr. Xinyu Ma](https://albert-ma.github.io/)
+- **Research Intern, Meituan Inc.** <br>
+  04/2025 - present, FMG, with [Dr. Hongyu Zang](https://scholar.google.com/citations?user=2kmSy50AAAAJ)
+
+- **Research Intern, Baidu Inc.** <br>
+  11/2023 - 04/2025, Baidu Search, with [Dr. Xinyu Ma](https://albert-ma.github.io/)
 
 - **Research Intern, Renmin University of China** <br>
   12/2022 - 06/2023, [AI Box](http://aibox.ruc.edu.cn/) Lab, advised by [Prof. Wayne Xin Zhao](https://scholar.google.com/citations?user=JNhNacoAAAAJ)
