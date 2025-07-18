@@ -52,30 +52,31 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">&#x1F98B;&#x1F32A; The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse</h1>
+            <h1 class="title is-1 publication-title">The Mirage of Model Editing: </br>Revisiting Evaluation in the <span style="font-variant: small-caps;">Wild</span></h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://yangwl.site" target="_blank">Wanli Yang</a><sup>1</sup>,</span>
+                <a href="https://yangwl.site" target="_blank">Wanli Yang</a><sup>1,2</sup>,</span>
                 <a href="http://ofey.me" target="_blank">Fei Sun</a><sup>†1</sup>,</span>
+                <a href="https://sumsky21.github.io" target="_blank">Jiajun Tan</a><sup>1,2</sup>,</span>
                 <a href="https://albert-ma.github.io" target="_blank">Xinyu Ma</a><sup>3</sup>,</span>
-                <a href="https://antiquality.github.io" target="_blank">Xun Liu</a><sup>2</sup>,</span>
+                <a href="https://caoqi92.github.io" target="_blank">Qi Cao</a><sup>1</sup>,</span>
                 <a href="https://www.yindawei.com" target="_blank">Dawei Yin</a><sup>3</sup>,</span>
-                <a href="https://scholar.google.com.hk/citations?user=hY8aLqAAAAAJ&hl=zh-CN&oi=ao" target="_blank">Xueqi Cheng</a><sup>1,2</sup></span>
+                <a href="https://dblp.org/pid/98/917.html" target="_blank">Huawei Shen</a><sup>1,2</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=hY8aLqAAAAAJ&hl" target="_blank">Xueqi Cheng</a><sup>1,2</sup></span>
             </div>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <sup>1</sup>CAS Key Laboratory of AI Safety,<br> Institute of Computing Technology, Chinese Academy of Sciences<br> <sup>2</sup>University of Chinese Academy of Sciences, <sup>3</sup>Baidu Inc.
+                <sup>1</sup>State Key Laboratory of AI Safety, Institute of Computing Technology, CAS<br> <sup>2</sup>University of Chinese Academy of Sciences &nbsp;&nbsp;&nbsp; <sup>3</sup>Baidu Inc.
               </span>
               <span class="cor-auth"><small><br><sup>†</sup>Corresponding Author</small></span>
             </div>
-
+                  <!-- Supplementary PDF link 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://aclanthology.org/2024.findings-acl.322.pdf" target="_blank"
+                        <a href="https://arxiv.org/abs/2502.11177" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -83,6 +84,7 @@
                         <span>Paper</span>
                       </a>
                     </span>
+                    -->
 
                     <!-- Supplementary PDF link 
                     <span class="link-block">
@@ -95,44 +97,46 @@
                     </a>
                   </span> -->
 
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2502.11177" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>ArXiv</span>
+                    </a>
+                  </span>
+
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/WanliYoung/Collapse-in-Model-Editing" target="_blank"
+                    <a href="https://github.com/WanliYoung/Revisit-Editing-Evaluation" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>Code</span>
-                  </a>
-                </span>
+                    </a>
+                  </span>
 
                   <!-- Google Drive link -->
                   <span class="link-block">
-                    <a href="https://drive.google.com/drive/folders/1awv48dbYW5X2t51ebB8yE_4VPE_j8-qs?usp=sharing" target="_blank"
+                    <a href="https://drive.google.com/drive/folders/1w9r7CL_a9k3HiorfSvE-RiShHvvrshoy?usp=sharing" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-database"></i>
                     </span>
                     <span>Data</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2402.09656" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    </a>
                   </span>
-                  <span>ArXiv</span>
-                </a>
-              </span>
             </div>
           </div>
 
-          <a name="intro">
-            <img src="static/images/intro.png" alt="intro" style="width: 600pt;"/>
-          </a>
+          <div style="text-align: center;">
+            <a name="intro">
+              <img src="static/images/fig_intro.png" alt="intro" style="width: 650pt;" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -165,7 +169,7 @@ End teaser video -->
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Although model editing has shown promise in revising knowledge in Large Language Models (LLMs), its impact on the inherent capabilities of LLMs is often overlooked. In this work, we reveal a critical phenomenon: even a single edit can trigger model collapse, manifesting as significant performance degradation in various benchmark tasks. However, benchmarking LLMs after each edit, while necessary to prevent such collapses, is impractically time-consuming and resource-intensive. To mitigate this, we propose using perplexity as a surrogate metric, validated by extensive experiments demonstrating changes in an edited model's perplexity are strongly correlated with its downstream task performances. We further conduct an in-depth study on sequential editing, a practical setting for real-world scenarios, across various editing methods and LLMs, focusing on hard cases from our previous single edit studies. The results indicate that nearly all examined editing methods result in model collapse after only few edits. To facilitate further research, we have utilized GPT-3.5 to develop a new dataset, HardEdit, based on those hard cases. This dataset aims to establish the foundation for pioneering research in reliable model editing and the mechanisms underlying editing-induced model collapse. We hope this work can draw the community's attention to the potential risks inherent in model editing practices.
+            Despite near-perfect results reported in the literature, the effectiveness of model editing in real-world applications remains unclear. To bridge this gap, we introduce QAEdit, a new benchmark aligned with widely used question answering (QA) datasets, and <span style="font-variant: small-caps;">Wild</span>, a task-agnostic evaluation framework designed to better reflect real-world usage of model editing. Our single editing experiments show that current editing methods perform substantially worse than previously reported (38.5% vs. 96.8%). We demonstrate that it stems from issues in the synthetic evaluation practices of prior work. Among them, the most severe is the use of teacher forcing during testing, which leaks both content and length of ground truth, leading to overestimated performance. Furthermore, we simulate practical deployment by sequential editing, revealing that current approaches fail drastically with only 1000 edits. This work calls for a shift in editing research toward rigorous evaluation and the development of robust, scalable methods that can reliably update knowledge in LLMs for real-world use.
           </p>
         </div>
       </div>
