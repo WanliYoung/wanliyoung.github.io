@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="This paper reveals existing model editing evaluation adopts inappropriate strategies, such as teacher forcing during testing, which substantially overestimate the effectiveness of existing techniques.">
+  <meta property="og:title" content="The Mirage of Model Editing: Revisiting Evaluation in the Wild"/>
+  <meta property="og:description" content="This paper reveals existing model editing evaluation adopts inappropriate strategies, such as teacher forcing during testing, which substantially overestimate the effectiveness of existing techniques."/>
+  <meta property="og:url" content="https://yangwl.site/revisit-editing-evaluation"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/fig_intro.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="The Mirage of Model Editing: Revisiting Evaluation in the Wild">
+  <meta name="twitter:description" content="This paper reveals existing model editing evaluation adopts inappropriate strategies, such as teacher forcing during testing, which substantially overestimate the effectiveness of existing techniques.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/fig_intro.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="model editing, knowledge update, evaluation pitfalls, teacher forcing">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>The Mirage of Model Editing: Revisiting Evaluation in the Wild</title>
+  <link rel="icon" type="image/x-icon" href="static/images/think.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">The Mirage of Model Editing: </br>Revisiting Evaluation in the <span style="font-variant: small-caps;">Wild</span></h1>
+            <p style="color: red; font-style: italic; font-weight: bold; font-size: 1.6rem; margin-top: -10px; margin-bottom: 15px;">
+              Are We Really Making Much Progress?
+            </p>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://yangwl.site" target="_blank">Wanli Yang</a><sup>1,2</sup>,</span>
+                <a href="http://ofey.me" target="_blank">Fei Sun</a><sup>†1</sup>,</span>
+                <a href="https://sumsky21.github.io" target="_blank">Jiajun Tan</a><sup>1,2</sup>,</span>
+                <a href="https://albert-ma.github.io" target="_blank">Xinyu Ma</a><sup>3</sup>,</span>
+                <a href="https://caoqi92.github.io" target="_blank">Qi Cao</a><sup>1</sup>,</span>
+                <a href="https://www.yindawei.com" target="_blank">Dawei Yin</a><sup>3</sup>,</span>
+                <a href="https://dblp.org/pid/98/917.html" target="_blank">Huawei Shen</a><sup>1,2</sup>,</span>
+                <a href="https://scholar.google.com/citations?user=hY8aLqAAAAAJ&hl" target="_blank">Xueqi Cheng</a><sup>1,2</sup></span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup>State Key Laboratory of AI Safety, Institute of Computing Technology, CAS<br> <sup>2</sup>University of Chinese Academy of Sciences &nbsp;&nbsp;&nbsp; <sup>3</sup>Baidu Inc.
+              </span>
+              <span class="cor-auth"><small><br><sup>†</sup>Corresponding Author</small></span>
+            </div>
+                  <!-- Supplementary PDF link 
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2502.11177" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+                    -->
+
+                    <!-- Supplementary PDF link 
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2502.11177" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>ArXiv</span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/WanliYoung/Revisit-Editing-Evaluation" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                  </span>
+
+                  <!-- Google Drive link -->
+                  <span class="link-block">
+                    <a href="https://drive.google.com/drive/folders/1w9r7CL_a9k3HiorfSvE-RiShHvvrshoy?usp=sharing" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Data</span>
+                    </a>
+                  </span>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <a name="intro">
+              <img src="static/images/fig_intro.png" alt="intro" style="width: 580pt;" />
+            </a>
+          </div>
+
+          <!-- News Panel -->
+          <section class="section" style="padding-top: 1rem; padding-bottom: 1rem;">
+            <div class="container is-max-desktop">
+              <div class="box" style="background-color: #f9f9f9;">
+                <h2 class="title is-5" style="margin-bottom: 0.5rem;">
+                  <img src="static/images/news.png" alt="News Icon" style="width: 1.1em; height: 1.3em; vertical-align: middle; margin-right: 0.1em;">
+                  News
+                </h2>
+                <ul style="margin-left: 1rem; font-size: 1rem; line-height: 2; list-style: none; padding-left: 0;">
+                  <li><strong>Jul 20, 2025:</strong> &nbsp; 🚀🚀🚀 We have launched <strong><a href="https://your-link.com" target="_blank">OpenEdit</a></strong>, a unified leaderboard for evaluating model editing techniques.</li>
+                  <li><strong>Jun 02, 2025:</strong> &nbsp; We have released our QAEdit benchmark on <a href="https://huggingface.co/datasets/WenDingY/QAEdit" target="_blank">HuggingFace</a>.</li>
+                  <li><strong>May 15, 2025:</strong> &nbsp; 🎉🎉🎉 Our paper has been accepted to <strong>ACL 2025 Main Conference</strong>!</li>
+                  <li><strong>Mar 04, 2025:</strong> &nbsp; Our proposed <span style="font-variant: small-caps;">Wild</span> evaluation framework for model editing has been integrated into <a href="https://github.com/zjunlp/EasyEdit" target="_blank">EasyEdit</a>.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        Your video here
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section>
+End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Despite near-perfect results reported in the literature, the effectiveness of model editing in real-world applications remains unclear. To bridge this gap, we introduce QAEdit, a new benchmark aligned with widely used question answering (QA) datasets, and <span style="font-variant: small-caps;">Wild</span>, a task-agnostic evaluation framework designed to better reflect real-world usage of model editing. Our single editing experiments show that current editing methods perform substantially worse than previously reported (38.5% vs. 96.8%). We demonstrate that it stems from issues in the synthetic evaluation practices of prior work. Among them, the most severe is the use of teacher forcing during testing, which leaks both content and length of ground truth, leading to overestimated performance. Furthermore, we simulate practical deployment by sequential editing, revealing that current approaches fail drastically with only 1000 edits. This work calls for a shift in editing research toward rigorous evaluation and the development of robust, scalable methods that can reliably update knowledge in LLMs for real-world use.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Satisfactory Advances of Model Editing</h2>
+          <div class="Text" style="text-align: justify; font-size: medium;">
+            <div class="item">
+              <a name="Table1">
+                <img src="static/images/exist_results.png" alt="Existing results of model editing." style="margin: 1% 0;" width="100%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Table 1: Evaluation results of mainstream model editing techniques on benchmark datasets, as reported in "<span style="font-style: italic;">A Comprehensive Study of Knowledge Editing for Large Language Models</span>".
+              </h2>
+            </div>
+            <br>
+            Recent works report near-perfect results of model editing techniques on corresponding benchmarks, suggesting substantial progress toward efficient and effective update of LLMs. However, these results often come from synthetic, oversimplified evaluation settings (e.g., identical prompts for editing and testing) that may fail to capture real-world complexities. This disparity raises a critical question: <span style="font-style: italic; font-weight: bold; color: red;">Can these promising results in the literature translate to practical applications?
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Evaluate Editing in the Wild</h2>
+          <div class="Text" style="text-align: justify; font-size: medium;">
+            <div class="item">
+              <a name="Figure1">
+                <img src="static/images/QAEdit_pipe.png" alt="Pipeline of QAEdit." style="margin: 1% 15%;" width="70%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 1: Illustration of QAEdit pipeline to evaluate model editing in real-world QA.
+              </h2>
+            </div>
+            <br>
+            <p style="text-align: justify;">
+            To rigorously examine the practical utility of model editing, we <span style="font-weight: bold;">focus on the most fundamental and widely studied task of QA</span> for two reasons: i) They offer clear evaluation criteria and broad applicability; ii) If current editing methods struggle on basic QA tasks, then they are unlikely to succeed in more challenging scenarios. Specifically, we apply editing methods to correct LLMs' errors in QA tasks and assess the improvement by re-evaluating edited LLMs on a standard QA evaluation framework (lm-evaluation-harness), as illustrated in Figure 1.
+            </p>
+            <a name="Table2">
+              <img src="static/images/preliminary_results.png" alt="Preliminary Observation on QAEdit." style="margin-top: 3%;margin-right: 10%; margin-bottom: 1%; margin-left: 10%;" width="80%" height="60%"/>
+            </a>
+            <h2 class="subtitle has-text-centered" style="font-size: medium;">
+              Table 2: Accuracy of edited Llama-2-7b-chat on questions it failed before editing in QAEdit.
+            </h2>
+            As shown in Table 2, state-of-the-art editing methods <span style="font-weight: bold;">achieve only 38.5% average success rate under QA evaluation</span>, far below previously reported results. Considering that QAEdit is derived from real QA datasets and assessed by standard QA evaluation, different from mainstream synthetic editing benchmarks and evaluation, this raises a critical question: <span style="font-style: italic; font-weight: bold; color: red;">Is the performance degradation attributed to the real-world complexity of QAEdit, or to real-world QA evaluation?</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">A Tale of Two Evaluations</h2>
+          <div class="Text" style="text-align: justify; font-size: medium;">
+            <div class="item">
+              <a name="Figure2">
+                <img src="static/images/comp_evals.png" alt="Comparison between synthetic and WILD." style="margin: 1% 0%;" width="100%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 2: Comparison between synthetic and <span style="font-variant: small-caps;">Wild</span> evaluation frameworks.
+              </h2>
+            </div>
+
+            <div class="item">
+              <a name="Table3">
+                <img src="static/images/table_comp_evals.png" alt="Table of comparison between synthetic and WILD." style="margin-top: 3.5%;margin-right: 12.5%; margin-bottom: 1%; margin-left: 12.5%;" width="75%" height="20%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Table 3: Key settings of synthetic and <span style="font-variant: small-caps;">Wild</span> evaluation across all four modules.
+              </h2>
+            </div>
+            
+            <br>
+            <p>
+            To identify the cause of this performance gap and guide further investigation, we first delve into the experimental setup of both editing (synthetic) and QA task (<span style="font-variant: small-caps;">Wild</span>) evaluations. We abstract them into four key modules: <span style="font-style: italic;">input</span>, <span style="font-style: italic;">generation strategy</span>, <span style="font-style: italic;">output truncation</span>, and <span style="font-style: italic;">metric</span>. This modular paradigm enables systematic comparison between the two evaluation frameworks, as shown in Figure 2. And Table 3 details the key differences between these evaluation frameworks.
+            </p>
+            <br>
+            <p>
+            We formalize the evaluation pipeline commonly used in prior model editing works as <span style="font-weight: bold; color: red;">synthetic evaluation framework</span>: i) <span style="font-weight: bold;">input</span>: using only question without additional context; ii) <span style="font-weight: bold;">generation strategy</span>: employing teacher forcing to feed ground truth tokens as input during decoding; iii) <span style="font-weight: bold;">output truncation</span>: truncating output to match the length of target answer; iv) <span style="font-weight: bold;">metric</span>: using token-level match ratio between the target and generated answer as accuracy.
+            </p>
+            <br>
+            <p>
+            We propose the <span style="color: red;"><span style="font-variant: small-caps;"><span style="font-weight: bold;">Wild</span></span> (<span style="font-weight: bold;">W</span>ithout <span style="font-weight: bold;">I</span>ntervention, <span style="font-weight: bold;">L</span>ive <span style="font-weight: bold;">D</span>ecoding) <span style="font-weight: bold;">evaluation framework</span></span> based on the standard QA evaluation protocol: i) <span style="font-weight: bold;">input</span>: prefixing question with contexts like task instructions; ii) <span style="font-weight: bold;">generation strategy</span>: adopting autoregressive decoding, where each output serves as input for subsequent generation; iii) <span style="font-weight: bold;">output truncation</span> using predefined stop tokens (e.g., ".", "\n", and "<|endoftext|>") as signal to terminate generation; iv) <span style="font-weight: bold;">metric</span>: <span style="font-variant: small-caps;">Wild</span> supports evaluation metrics, including BERTScore and exact match (EM). Given its popularity and alignment with human judgment, we adopt LLM-as-a-Judge as the primary metric to illustrate the framework and conduct our study.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Benchmark & Evaluation Analysis</h2>
+          <div class="Text" style="text-align: justify; font-size: medium;">
+            <div class="item">
+              <a name="Table4">
+                <img src="static/images/single_results.png" alt="Results of single editing under WILD evaluation." style="margin: 1% 0%;" width="100%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Table 4: Comparison between synthetic evaluation (<span style="font-weight: bold;">syn.</span>) and <span style="font-variant: small-caps;">Wild</span> evaluation (<span style="font-weight: bold;"><span style="font-variant: small-caps;">Wild</span></span>).
+              </h2>
+            </div>
+            <br>
+            <span style="font-weight: bold; color: red;">Benchmark Perspective:</span>
+            QAEdit exhibits moderately lower editing reliability compared to ZsRE and CounterFact, reflecting its diverse and challenging nature as a real-world benchmark. However, this modest gap is insufficient to explain the significant discrepancy observed in our earlier analysis.
+            <br>
+            <span style="font-weight: bold; color: red;">Method Perspective:</span>
+            i) Recent state-of-the-art methods, GRACE and WISE, exhibit the most significant decrease, with both reliability and generalization dropping below 5%.
+            ii) In comparison, traditional methods like FT-M and ROME exhibit superior stability and preserve a certain level of effectiveness in <span style="font-variant: small-caps;">Wild</span> evaluation.
+            <br>
+            <span style="font-weight: bold; color: red;">Evaluation Perspective:</span>
+            i) Performance on each benchmark drops sharply from synthetic evaluation (~96%) to <span style="font-variant: small-caps;">Wild</span> evaluation (e.g., 43.8% on ZsRE and 38.9% on QAEdit), indicating that <span style="font-weight: bold;">synthetic evaluation substantially overestimates the effectiveness of editing methods</span>.
+            ii) Unlike synthetic evaluation, which reports uniformly high scores, <span style="font-weight: bold;"><span style="font-variant: small-caps;">Wild</span> differentiates methods effectively</span>, providing valuable insights for future research.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Controlled Study of Evaluation</h2>
+          <div class="Text" style="text-align: justify; font-size: medium;">
+            We conduct controlled experiments to systematically investigate how different module variations in synthetic evaluation contribute to performance overestimation. In particular, we focus on two most influential factors: <span style="font-style: italic;">teacher forcing generation</span> and <span style="font-style: italic;">ground truth length truncation</span>. For analysis of other modules, please refer to our full paper.
+
+
+            <div class="item">
+              <a name="Figure3">
+                <img src="static/images/generation_strategy.png" alt="Controlled study of generation strategy." style="margin-top: 2%;margin-right: 0%; margin-bottom: 1%; margin-left: 0%;" width="100%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 3: Controlled study on generation strategy.
+              </h2>
+            </div>
+            <br>
+            
+            <span style="font-weight: bold; color: red;">Generation Strategy:</span>
+            Teacher forcing prevents error propagation by feeding ground truth tokens as input, artificially elevating the performance.
+            <br>
+            
+            <div class="item">
+              <a name="Figure4">
+                <img src="static/images/output_truncation.png" alt="Controlled study of output truncation." style="margin-top: 2%;margin-right: 0%; margin-bottom: 1%; margin-left: 0%;" width="100%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 4: Controlled study on output truncation.
+              </h2>
+            </div>
+            <br>
+
+            <span style="font-weight: bold; color: red;">Output Truncation:</span>
+            Irrational truncation in synthetic evaluation masks subsequent errors, resulting in inflated performance. Under natural stop criteria, edited models typically generate additional errors, as shown in Figure 5.
+            <br>
+
+            <div class="item">
+              <a name="Table5">
+                <img src="static/images/add_errors.png" alt="Additional errors under natural stop criteria." style="margin-top: 2%;margin-right: 25%; margin-bottom: 1%; margin-left: 25%;" width="50%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Table 5: Additionally generated content beyond ground truth length under natural stop criteria.
+              </h2>
+            </div>
+            <br>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">(Sequential) Editing in the Wild</h2>
+          <div class="Text" style="text-align: justify; font-size: medium;">
+            <div class="item">
+              <a name="Table6">
+                <img src="static/images/sequential_results.png" alt="Sequential editing results under WILD evaluation." style="margin: 1% 0;" width="100%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Table 6: Sequential editing results on QAEdit under synthetic (<span style="font-weight: bold;">syn.</span>) and <span style="font-variant: small-caps;">Wild</span> (<span style="font-weight: bold;"><span style="font-variant: small-caps;">Wild</span></span>) evaluations .
+              </h2>
+            </div>
+            <br>
+            Although our analysis via single editing reveals limitations in synthetic evaluation, such isolated editing fails to capture the continuous, large-scale demands of editing in real-world scenarios. Therefore, We now address our primary research question: testing model editing under <span style="font-variant: small-caps;">Wild</span> evaluation via sequential editing, a setup that better reflects practical requirements. We keep previously adopted setup, but limit to 1000 samples, as existing methods perform significantly worse with more edits. The results in Table 6 reveal that <span style="font-weight: bold;">in <span style="font-variant: small-caps;">Wild</span> evaluation with sequential editing, all methods except FT-M exhibit nearly unusable performance (only 9.3% average reliability), with FT-M achieving a 40.5% average reliability</span>.
+            <br>
+            <div class="item">
+              <a name="Figure5">
+                <img src="static/images/heatmap.png" alt="Sequential editing results under WILD evaluation." style="margin-top: 3%;margin-right: 15%; margin-bottom: 1%; margin-left: 15%;" width="70%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 5: Reliability evolution of sequential editing on Llama-3-8b, with repeated evaluation of previous batches after each new edit batch (batch size = 20).
+              </h2>
+            </div>
+            <br>
+            To gain insights into the poor final performance, we also investigate how editing effectiveness changes during continuous editing. Specifically, we randomly partition 100 QAEdit samples into 5 batches of 20 samples each. Using MEMIT on Llama-3-8b, we iteratively edit each batch while evaluating the edited model on each previously edited batch separately to track dynamics of editing effectiveness. The results depicted in Figure 5 reveal the key challenges of sequential editing: <span style="font-weight: bold;">progressive loss of previously edited knowledge coupled with decreasing effectiveness in incorporating new knowledge</span>, highlighting that lifelong model editing is still an open challenge.
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{yang2025revisitediting,
+        title={The Mirage of Model Editing: Revisiting Evaluation in the Wild}, 
+        author={Wanli Yang and Fei Sun and Jiajun Tan and Xinyu Ma and Qi Cao and Dawei Yin and Huawei Shen and Xueqi Cheng},
+        year={2025},
+        eprint={2502.11177},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL},
+        url={https://arxiv.org/abs/2502.11177}, 
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
