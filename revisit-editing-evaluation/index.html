@@ -188,19 +188,17 @@ End teaser video -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Satisfactory Advances of Model Editing</h2>
-          <div class="Text" style="text-align: left; font-size: medium;">
+          <div class="Text" style="text-align: justify; font-size: medium;">
             <div class="item">
-              <a name="Fig1">
-                <img src="static/images/exist_results.png" alt="Existing results of model editing." style="margin: 0 0;" width="100%" height="60%"/>
+              <a name="Table1">
+                <img src="static/images/exist_results.png" alt="Existing results of model editing." style="margin: 1% 0;" width="100%" height="60%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Table 1: Evaluation results of mainstream model editing techniques on benchmark datasets, as reported in "A Comprehensive Study of Knowledge Editing for Large Language Models".
+                Table 1: Evaluation results of mainstream model editing techniques on benchmark datasets, as reported in "<span style="font-style: italic;">A Comprehensive Study of Knowledge Editing for Large Language Models</span>".
               </h2>
             </div>
             <br>
-            <p style="text-align: justify;">
-            Recent works report near-perfect results of model editing techniques on corresponding benchmarks, suggesting substantial progress toward efficient and effective update of LLMs. However, these results often come from synthetic, oversimplified evaluation settings (e.g., identical prompts for editing and testing) that may fail to capture real-world complexities. This disparity raises a critical question: <span style="font-style: italic; font-weight: bold; color: red;">Can these promising results in the literature translate to practical applications?</span>
-            </p>
+            Recent works report near-perfect results of model editing techniques on corresponding benchmarks, suggesting substantial progress toward efficient and effective update of LLMs. However, these results often come from synthetic, oversimplified evaluation settings (e.g., identical prompts for editing and testing) that may fail to capture real-world complexities. This disparity raises a critical question: <span style="font-style: italic; font-weight: bold; color: red;">Can these promising results in the literature translate to practical applications?
           </div>
         </div>
       </div>
@@ -214,10 +212,10 @@ End teaser video -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-3">Evaluate Editing in the Wild</h2>
-          <div class="Text" style="text-align: left; font-size: medium;">
+          <div class="Text" style="text-align: justify; font-size: medium;">
             <div class="item">
-              <a name="Fig2">
-                <img src="static/images/QAEdit_pipe.png" alt="Correlations between Perplexity and Performance" style="margin: 0 15%;" width="70%" height="60%"/>
+              <a name="Figure1">
+                <img src="static/images/QAEdit_pipe.png" alt="Pipeline of QAEdit." style="margin: 1% 15%;" width="70%" height="60%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
                 Figure 1: Illustration of QAEdit pipeline to evaluate model editing in real-world QA.
@@ -227,12 +225,13 @@ End teaser video -->
             <p style="text-align: justify;">
             To rigorously examine the practical utility of model editing, we <span style="font-weight: bold;">focus on the most fundamental and widely studied task of QA</span> for two reasons: i) They offer clear evaluation criteria and broad applicability; ii) If current editing methods struggle on basic QA tasks, then they are unlikely to succeed in more challenging scenarios. Specifically, we apply editing methods to correct LLMs' errors in QA tasks and assess the improvement by re-evaluating edited LLMs on a standard QA evaluation framework (lm-evaluation-harness), as illustrated in Figure 1.
             </p>
-            <a name="Fig2">
-              <img src="static/images/preliminary_results.png" alt="Correlations between Perplexity and Performance" style="margin: 2% 10%;" width="80%" height="60%"/>
+            <a name="Table2">
+              <img src="static/images/preliminary_results.png" alt="Preliminary Observation on QAEdit." style="margin-top: 3%;margin-right: 10%; margin-bottom: 1%; margin-left: 10%;" width="80%" height="60%"/>
             </a>
             <h2 class="subtitle has-text-centered" style="font-size: medium;">
               Table 2: Accuracy of edited Llama-2-7b-chat on questions it failed before editing in QAEdit.
             </h2>
+            As shown in Table 2, state-of-the-art editing methods <span style="font-weight: bold;">achieve only 38.5% average success rate under QA evaluation</span>, far below previously reported results. Considering that QAEdit is derived from real QA datasets and assessed by standard QA evaluation, different from mainstream synthetic editing benchmarks and evaluation, this raises a critical question: <span style="font-style: italic; font-weight: bold; color: red;">Is the performance degradation attributed to the real-world complexity of QAEdit, or to real-world QA evaluation?</span>
           </div>
         </div>
       </div>
@@ -245,44 +244,38 @@ End teaser video -->
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Model Collapse Induced by Editing</h2>
-          <h3 class="title is-4" style="text-align: center;">Single Editing</h3>
-          <div class="Text" style="text-align: left; font-size: medium;">
+          <h2 class="title is-3">A Tale of Two Evaluations</h2>
+          <div class="Text" style="text-align: justify; font-size: medium;">
             <div class="item">
-              <a name="Fig3">
-                <img src="static/images/case.png" alt="Edit Cases Trigger Collapse" style="margin: 0 25%;" width="50%" height="20%"/>
+              <a name="Figure2">
+                <img src="static/images/comp_evals.png" alt="Comparison between synthetic and WILD." style="margin: 1% 0%;" width="100%" height="20%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Table 1: Examples of HardCF that induce collapse in corresponding LLMs through a single ROME edit, with the "Normal" row showcasing other normal cases from COUNTERFACT for contrast.
+                Figure 2: Comparison between synthetic and <span style="font-variant: small-caps;">Wild</span> evaluation frameworks.
               </h2>
             </div>
-            <br>
-            Upon examining the perplexity, we find that ROME consistently causes all three LLMs under study (GPT-2-XL, GPT-J, and Llama2-7b) to collapse with a <b>single edit</b> when applied to COUNTERFACT. Examples presented in Table 1 indicate that, for GPT-2-XL and GPT-J, the samples causing model collapse primarily featuring subjects that are single, commonly used words; for Llama2-7b, the subjects in these challenging cases usually encompass names of individuals or entities, presented in a particular format. 
-            <br>
+
             <div class="item">
-              <a name="Fig4">
-                <img src="static/images/param.png" alt="Parameters Variation" style="margin: 0 10%;" width="80%" height="60%"/>
+              <a name="Table3">
+                <img src="static/images/table_comp_evals.png" alt="Table of comparison between synthetic and WILD." style="margin-top: 3.5%;margin-right: 12.5%; margin-bottom: 1%; margin-left: 12.5%;" width="75%" height="20%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Figure 3: The absolute difference between the weights of the edited layer (Layers.5.mlp.down_proj) and its original weights for ROME-edited Llama2-7b models.
+                Table 3: Key settings of synthetic and <span style="font-variant: small-caps;">Wild</span> evaluation across all four modules.
               </h2>
             </div>
+            
             <br>
-            To uncover the root causes of model collapse, we initiated a preliminary investigation into the parameter changes in edited models. Figure 3 shows that the collapsed model experienced significantly larger parameter changes than the stable edited model.
-          </div>
-          <br>
-          <h3 class="title is-4" style="text-align: center;">Sequential Editing</h3>
-          <div class="Text" style="text-align: left; font-size: medium;">
-            <div class="item">
-              <a name="Fig5">
-                <img src="static/images/seq.png" alt="Sequential Editing Collapse" style="margin: 0 5%;" width="90%" height="20%"/>
-              </a>
-              <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Figure 4: Perplexity evolution over 107 editing iterations for normal and hard cases. The y-axes are tailored for each subplot accordingly due to the the significant variation in the magnitude of perplexity changes.
-              </h2>
-            </div>
+            <p>
+            To identify the cause of this performance gap and guide further investigation, we first delve into the experimental setup of both editing (synthetic) and QA task (<span style="font-variant: small-caps;">Wild</span>) evaluations. We abstract them into four key modules: <span style="font-style: italic;">input</span>, <span style="font-style: italic;">generation strategy</span>, <span style="font-style: italic;">output truncation</span>, and <span style="font-style: italic;">metric</span>. This modular paradigm enables systematic comparison between the two evaluation frameworks, as shown in Figure 2. And Table 3 details the key differences between these evaluation frameworks.
+            </p>
             <br>
-            Further experiments in sequential editing reveal that, hard cases from single editing can induce model collapse under nearly all the combinations examined. Conversely, normal cases that are randomly sampled from the rest of COUNTERFACT, do not compromise the integrity of models when edited by ROME and MEMIT.
+            <p>
+            We formalize the evaluation pipeline commonly used in prior model editing works as <span style="font-weight: bold; color: red;">synthetic evaluation framework</span>: i) <span style="font-weight: bold;">input</span>: using only question without additional context; ii) <span style="font-weight: bold;">generation strategy</span>: employing teacher forcing to feed ground truth tokens as input during decoding; iii) <span style="font-weight: bold;">output truncation</span>: truncating output to match the length of target answer; iv) <span style="font-weight: bold;">metric</span>: using token-level match ratio between the target and generated answer as accuracy.
+            </p>
+            <br>
+            <p>
+            We propose the <span style="color: red;"><span style="font-variant: small-caps;"><span style="font-weight: bold;">Wild</span></span> (<span style="font-weight: bold;">W</span>ithout <span style="font-weight: bold;">I</span>ntervention, <span style="font-weight: bold;">L</span>ive <span style="font-weight: bold;">D</span>ecoding) <span style="font-weight: bold;">evaluation framework</span></span> based on the standard QA evaluation protocol: i) <span style="font-weight: bold;">input</span>: prefixing question with contexts like task instructions; ii) <span style="font-weight: bold;">generation strategy</span>: adopting autoregressive decoding, where each output serves as input for subsequent generation; iii) <span style="font-weight: bold;">output truncation</span> using predefined stop tokens (e.g., ".", "\n", and "<|endoftext|>") as signal to terminate generation; iv) <span style="font-weight: bold;">metric</span>: <span style="font-variant: small-caps;">Wild</span> supports evaluation metrics, including BERTScore and exact match (EM). Given its popularity and alignment with human judgment, we adopt LLM-as-a-Judge as the primary metric to illustrate the framework and conduct our study.
+            </p>
           </div>
         </div>
       </div>
@@ -295,18 +288,119 @@ End teaser video -->
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">HardEdit: A Challenging Dataset</h2>
-          <div class="Text" style="text-align: left; font-size: medium;">
+          <h2 class="title is-3">Benchmark & Evaluation Analysis</h2>
+          <div class="Text" style="text-align: justify; font-size: medium;">
             <div class="item">
-              <a name="Fig6">
-                <img src="static/images/dataval.png" alt="Valdation for HardEdit" style="margin: 0 5%;" width="90%" height="60%"/>
+              <a name="Table4">
+                <img src="static/images/single_results.png" alt="Results of single editing under WILD evaluation." style="margin: 1% 0%;" width="100%" height="60%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Figure 5: Perplexity in three LLMs, each edited by four different methods sequentially on the HardEdit dataset.
+                Table 4: Comparison between synthetic evaluation (<span style="font-weight: bold;">syn.</span>) and <span style="font-variant: small-caps;">Wild</span> evaluation (<span style="font-weight: bold;"><span style="font-variant: small-caps;">Wild</span></span>).
               </h2>
             </div>
             <br>
-            To further facilitate comprehensive evaluations of future advanced methods, we crafted a challenging dataset, termed HardEdit, based on the patterns derived from the hard cases. Extensive experiments confirm the efficacy of the dataset in identifying the potential risks of editing algorithms.
+            <span style="font-weight: bold; color: red;">Benchmark Perspective:</span>
+            QAEdit exhibits moderately lower editing reliability compared to ZsRE and CounterFact, reflecting its diverse and challenging nature as a real-world benchmark. However, this modest gap is insufficient to explain the significant discrepancy observed in our earlier analysis.
+            <br>
+            <span style="font-weight: bold; color: red;">Method Perspective:</span>
+            i) Recent state-of-the-art methods, GRACE and WISE, exhibit the most significant decrease, with both reliability and generalization dropping below 5%.
+            ii) In comparison, traditional methods like FT-M and ROME exhibit superior stability and preserve a certain level of effectiveness in <span style="font-variant: small-caps;">Wild</span> evaluation.
+            <br>
+            <span style="font-weight: bold; color: red;">Evaluation Perspective:</span>
+            i) Performance on each benchmark drops sharply from synthetic evaluation (~96%) to <span style="font-variant: small-caps;">Wild</span> evaluation (e.g., 43.8% on ZsRE and 38.9% on QAEdit), indicating that <span style="font-weight: bold;">synthetic evaluation substantially overestimates the effectiveness of editing methods</span>.
+            ii) Unlike synthetic evaluation, which reports uniformly high scores, <span style="font-weight: bold;"><span style="font-variant: small-caps;">Wild</span> differentiates methods effectively</span>, providing valuable insights for future research.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Controlled Study of Evaluation</h2>
+          <div class="Text" style="text-align: justify; font-size: medium;">
+            We conduct controlled experiments to systematically investigate how different module variations in synthetic evaluation contribute to performance overestimation. In particular, we focus on two most influential factors: <span style="font-style: italic;">teacher forcing generation</span> and <span style="font-style: italic;">ground truth length truncation</span>. For analysis of other modules, please refer to our full paper.
+
+
+            <div class="item">
+              <a name="Figure3">
+                <img src="static/images/generation_strategy.png" alt="Controlled study of generation strategy." style="margin-top: 2%;margin-right: 0%; margin-bottom: 1%; margin-left: 0%;" width="100%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 3: Controlled study on generation strategy.
+              </h2>
+            </div>
+            <br>
+            
+            <span style="font-weight: bold; color: red;">Generation Strategy:</span>
+            Teacher forcing prevents error propagation by feeding ground truth tokens as input, artificially elevating the performance.
+            <br>
+            
+            <div class="item">
+              <a name="Figure4">
+                <img src="static/images/output_truncation.png" alt="Controlled study of output truncation." style="margin-top: 2%;margin-right: 0%; margin-bottom: 1%; margin-left: 0%;" width="100%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 4: Controlled study on output truncation.
+              </h2>
+            </div>
+            <br>
+
+            <span style="font-weight: bold; color: red;">Output Truncation:</span>
+            Irrational truncation in synthetic evaluation masks subsequent errors, resulting in inflated performance. Under natural stop criteria, edited models typically generate additional errors, as shown in Figure 5.
+            <br>
+
+            <div class="item">
+              <a name="Table5">
+                <img src="static/images/add_errors.png" alt="Additional errors under natural stop criteria." style="margin-top: 2%;margin-right: 25%; margin-bottom: 1%; margin-left: 25%;" width="50%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Table 5: Additionally generated content beyond ground truth length under natural stop criteria.
+              </h2>
+            </div>
+            <br>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">(Sequential) Editing in the Wild</h2>
+          <div class="Text" style="text-align: justify; font-size: medium;">
+            <div class="item">
+              <a name="Table6">
+                <img src="static/images/sequential_results.png" alt="Sequential editing results under WILD evaluation." style="margin: 1% 0;" width="100%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Table 6: Sequential editing results on QAEdit under synthetic (<span style="font-weight: bold;">syn.</span>) and <span style="font-variant: small-caps;">Wild</span> (<span style="font-weight: bold;"><span style="font-variant: small-caps;">Wild</span></span>) evaluations .
+              </h2>
+            </div>
+            <br>
+            Although our analysis via single editing reveals limitations in synthetic evaluation, such isolated editing fails to capture the continuous, large-scale demands of editing in real-world scenarios. Therefore, We now address our primary research question: testing model editing under <span style="font-variant: small-caps;">Wild</span> evaluation via sequential editing, a setup that better reflects practical requirements. We keep previously adopted setup, but limit to 1000 samples, as existing methods perform significantly worse with more edits. The results in Table 6 reveal that <span style="font-weight: bold;">in <span style="font-variant: small-caps;">Wild</span> evaluation with sequential editing, all methods except FT-M exhibit nearly unusable performance (only 9.3% average reliability), with FT-M achieving a 40.5% average reliability</span>.
+            <br>
+            <div class="item">
+              <a name="Figure5">
+                <img src="static/images/heatmap.png" alt="Sequential editing results under WILD evaluation." style="margin-top: 3%;margin-right: 15%; margin-bottom: 1%; margin-left: 15%;" width="70%" height="60%"/>
+              </a>
+              <h2 class="subtitle has-text-centered" style="font-size: medium;">
+                Figure 5: Reliability evolution of sequential editing on Llama-3-8b, with repeated evaluation of previous batches after each new edit batch (batch size = 20).
+              </h2>
+            </div>
+            <br>
+            To gain insights into the poor final performance, we also investigate how editing effectiveness changes during continuous editing. Specifically, we randomly partition 100 QAEdit samples into 5 batches of 20 samples each. Using MEMIT on Llama-3-8b, we iteratively edit each batch while evaluating the edited model on each previously edited batch separately to track dynamics of editing effectiveness. The results depicted in Figure 5 reveal the key challenges of sequential editing: <span style="font-weight: bold;">progressive loss of previously edited knowledge coupled with decreasing effectiveness in incorporating new knowledge</span>, highlighting that lifelong model editing is still an open challenge.
+          </div>
         </div>
       </div>
     </div>
@@ -318,25 +412,14 @@ End teaser video -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@inproceedings{yang-etal-2024-butterfly,
-    title = "The Butterfly Effect of Model Editing: Few Edits Can Trigger Large Language Models Collapse",
-    author = "Yang, Wanli  and
-      Sun, Fei  and
-      Ma, Xinyu  and
-      Liu, Xun  and
-      Yin, Dawei  and
-      Cheng, Xueqi",
-    editor = "Ku, Lun-Wei  and
-      Martins, Andre  and
-      Srikumar, Vivek",
-    booktitle = "Findings of the Association for Computational Linguistics ACL 2024",
-    month = aug,
-    year = "2024",
-    address = "Bangkok, Thailand and virtual meeting",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2024.findings-acl.322",
-    pages = "5419--5437",
-    abstract = "Although model editing has shown promise in revising knowledge in Large Language Models (LLMs), its impact on the inherent capabilities of LLMs is often overlooked. In this work, we reveal a critical phenomenon: even a single edit can trigger model collapse, manifesting as significant performance degradation in various benchmark tasks. However, benchmarking LLMs after each edit, while necessary to prevent such collapses, is impractically time-consuming and resource-intensive. To mitigate this, we propose using perplexity as a surrogate metric, validated by extensive experiments demonstrating changes in an edited model{'}s perplexity are strongly correlated with its downstream task performances. We further conduct an in-depth study on sequential editing, a practical setting for real-world scenarios, across various editing methods and LLMs, focusing on hard cases from our previous single edit studies. The results indicate that nearly all examined editing methods result in model collapse after only few edits. To facilitate further research, we have utilized GPT-3.5 to develop a new dataset, HardEdit, based on those hard cases. This dataset aims to establish the foundation for pioneering research in reliable model editing and the mechanisms underlying editing-induced model collapse. We hope this work can draw the community{'}s attention to the potential risks inherent in model editing practices.",
+      <pre><code>@misc{yang2025revisitediting,
+        title={The Mirage of Model Editing: Revisiting Evaluation in the Wild}, 
+        author={Wanli Yang and Fei Sun and Jiajun Tan and Xinyu Ma and Qi Cao and Dawei Yin and Huawei Shen and Xueqi Cheng},
+        year={2025},
+        eprint={2502.11177},
+        archivePrefix={arXiv},
+        primaryClass={cs.CL},
+        url={https://arxiv.org/abs/2502.11177}, 
 }</code></pre>
     </div>
 </section>
