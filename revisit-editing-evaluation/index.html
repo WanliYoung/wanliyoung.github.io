@@ -53,6 +53,9 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">The Mirage of Model Editing: </br>Revisiting Evaluation in the <span style="font-variant: small-caps;">Wild</span></h1>
+            <p style="color: red; font-style: italic; font-weight: bold; font-size: 1.6rem; margin-top: -10px; margin-bottom: 15px;">
+              Are We Really Making Much Progress?
+            </p>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -134,7 +137,7 @@
 
           <div style="text-align: center;">
             <a name="intro">
-              <img src="static/images/fig_intro.png" alt="intro" style="width: 650pt;" />
+              <img src="static/images/fig_intro.png" alt="intro" style="width: 580pt;" />
             </a>
           </div>
         </div>
@@ -184,18 +187,20 @@ End teaser video -->
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Pilot Observation:<br> Editing Can Disrupt Large Language Models</h2>
+          <h2 class="title is-3">Satisfactory Advances of Model Editing</h2>
           <div class="Text" style="text-align: left; font-size: medium;">
             <div class="item">
               <a name="Fig1">
-                <img src="static/images/pilot_obs.png" alt="Pilot Observation for Model Collapse" style="margin: 0 10%;" width="80%" height="60%"/>
+                <img src="static/images/exist_results.png" alt="Existing results of model editing." style="margin: 0 0;" width="100%" height="60%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Figure 1: (a) Scatter plot of perplexity for models independently edited by ROME from the original GPT-J, with each point representing a unique edit case in the COUNTERFACT dataset.<br> (b) Average performance with variance on downstream tasks for the top 30 high-perplexity models in Figure 1a, comparing to the original model and random guessing.
+                Table 1: Evaluation results of mainstream model editing techniques on benchmark datasets, as reported in "A Comprehensive Study of Knowledge Editing for Large Language Models".
               </h2>
             </div>
             <br>
-            As an initial exploration of the impacts caused by editing, we opt to quickly identify a small set of anomalous models produced by each edit, facilitating subsequent investigation. We focus on using ROME to edit GPT-J with perplexity as a tool to detect anomalies. The results reveal that certain samples cause edited models to exhibit extremely high perplexity. Further experiments on the top 30 models with the highest perplexity demonstrate that the downstream task performance of these models is significantly compromised.
+            <p style="text-align: justify;">
+            Recent works report near-perfect results of model editing techniques on corresponding benchmarks, suggesting substantial progress toward efficient and effective update of LLMs. However, these results often come from synthetic, oversimplified evaluation settings (e.g., identical prompts for editing and testing) that may fail to capture real-world complexities. This disparity raises a critical question: <span style="font-style: italic; font-weight: bold; color: red;">Can these promising results in the literature translate to practical applications?</span>
+            </p>
           </div>
         </div>
       </div>
@@ -208,18 +213,26 @@ End teaser video -->
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Perplexity as a Surrogate Metric</h2>
+          <h2 class="title is-3">Evaluate Editing in the Wild</h2>
           <div class="Text" style="text-align: left; font-size: medium;">
             <div class="item">
               <a name="Fig2">
-                <img src="static/images/perplexity.png" alt="Correlations between Perplexity and Performance" style="margin: 0 10%;" width="80%" height="60%"/>
+                <img src="static/images/QAEdit_pipe.png" alt="Correlations between Perplexity and Performance" style="margin: 0 15%;" width="70%" height="60%"/>
               </a>
               <h2 class="subtitle has-text-centered" style="font-size: medium;">
-                Figure 2: Correlations between perplexity and downstream task performance across different LLMs, measured by task-specific metrics: Exact Match (EM) for NQ; F1 for SQuAD2.0.; Accuracy for remaining tasks. ρ refers to the Spearman's Rho value, measuring the rank correlation between perplexity and corresponding downstream task performance, with all p-values < 0.01.
+                Figure 1: Illustration of QAEdit pipeline to evaluate model editing in real-world QA.
               </h2>
             </div>
             <br>
-            To assess whether perplexity can serve as a surrogate metric, thereby avoiding the need for costly benchmarking LLMs after each edit, we conduct an in-depth investigation to demonstrate that models with differing levels of perplexity correspond to varying performance in downstream tasks. The results in Figure 2 reveal that an increase in perplexity typically indicates a decline in the model's overall performance.
+            <p style="text-align: justify;">
+            To rigorously examine the practical utility of model editing, we <span style="font-weight: bold;">focus on the most fundamental and widely studied task of QA</span> for two reasons: i) They offer clear evaluation criteria and broad applicability; ii) If current editing methods struggle on basic QA tasks, then they are unlikely to succeed in more challenging scenarios. Specifically, we apply editing methods to correct LLMs' errors in QA tasks and assess the improvement by re-evaluating edited LLMs on a standard QA evaluation framework (lm-evaluation-harness), as illustrated in Figure 1.
+            </p>
+            <a name="Fig2">
+              <img src="static/images/preliminary_results.png" alt="Correlations between Perplexity and Performance" style="margin: 2% 10%;" width="80%" height="60%"/>
+            </a>
+            <h2 class="subtitle has-text-centered" style="font-size: medium;">
+              Table 2: Accuracy of edited Llama-2-7b-chat on questions it failed before editing in QAEdit.
+            </h2>
           </div>
         </div>
       </div>
