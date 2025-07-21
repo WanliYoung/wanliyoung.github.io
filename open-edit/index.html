@@ -54,12 +54,33 @@
   </h1>
 
   <div class="description">
-    <p>
-      This leaderboard presents a unified evaluation of recent <strong>model editing techniques</strong> across multiple LLMs and datasets.
-      The experiments were conducted under consistent settings to ensure comparability.
+    <p style="font-size:20px; font-weight:bold; color:#c62828; text-align:left; margin-bottom:1em;">
+      This leaderboard presents a unified evaluation of mainstream <strong>model editing techniques</strong> across various LLMs and datasets.
     </p>
+    
+    <p>
+      To ensure <strong>consistency</strong> and <strong>comparability</strong> across methods, we adopt a unified experimental setup. 
+      For each dataset, we randomly sample <strong>3000 instances</strong> and perform <strong>lifelong model editing</strong>. For each editing method, we explore various <strong>batch size</strong> settings and select a suitable configuration based on empirical performance.
+    </p>
+
+    <p> A comprehensive evaluation of edited model is conducted after the entire editing process is completed. <strong>The evaluation setup is standardized as follows:</strong></p>
+    <ol>
+      <li>
+        <strong>Input:</strong> using only question without additional context to align with existing literature.
+      </li>
+      <li>
+        <strong>Generation Strategy:</strong> employing <em>autoregressive generation</em> rather than the commonly adopted <em>teacher forcing</em>.
+      </li>
+      <li>
+        <strong>Output Truncation:</strong> terminating generation upon encountering predefined stop tokens (e.g., <code>"&lt;|endoftext|&gt;"</code>), rather than truncating at ground truth length, as is common in prior work.
+      </li>
+      <li>
+        <strong>Metric:</strong> adopting <em>exact match (EM)</em> as a strict criterion for judging whether the edited knowledge is correctly generated.
+      </li>
+    </ol>
+
     <p><strong>Large Language Models:</strong> LLaMA-3-8B-Instruct, Qwen2.5-7B-Instruct, Mistral-7B-v0.1<br>
-       <strong>Editing methods:</strong> MEMIT, WISE, AlphaEdit, RLEdit<br>
+       <strong>Editing Methods:</strong> MEMIT, WISE, AlphaEdit, RLEdit<br>
        <strong>Datasets:</strong> ZsRE, <span style="font-variant: small-caps;">CounterFact</span><br>
        <strong>Metrics:</strong> Reliability, Generalization, Capability (average performance of edited models on GSM8K, MMLU, Natural Questions, WMT, and SST2)</p>
   </div>
