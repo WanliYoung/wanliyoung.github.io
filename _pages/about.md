@@ -16,7 +16,7 @@ Hi! I'm a second-year PhD student at Institute of Computing Technology, Chinese 
 - [08/2025] Invited to present the tutorial "Model Editing in LLMs: Advances and Challenges" at **NLPCC 2025** (Xinjiang) with [Dr. Junfeng Fang](https://scholar.google.com/citations?user=beNNywsAAAAJ&hl).
 - [05/2025] One paper was accepted by **ACL 2025**.
 - [09/2024] One paper was accepted by **EMNLP 2024**.
-- [05/2024] Two paper was accepted by **ACL 2024**.
+- [05/2024] Two paper were accepted by **ACL 2024**.
 
 
 ## Preprint
