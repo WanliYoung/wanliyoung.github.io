@@ -9,7 +9,20 @@ redirect_from:
 
 ---
 
-Hi! I'm a first-year PhD student at Institute of Computing Technology, Chinese Academy of Sciences (ICT, CAS), fortunate to be advised by [Prof. Fei Sun](http://ofey.me/). Previously, I obtained my B.E. in Software Engineering from Nankai University. My research interests include Knowledge Editing, NLP, Trustworthy AI, and Recommender System.
+Hi! I'm a second-year PhD student at Institute of Computing Technology, Chinese Academy of Sciences (ICT, CAS), fortunate to be advised by [Prof. Fei Sun](http://ofey.me/). Previously, I obtained my B.E. in Software Engineering from Nankai University. My research interests include Knowledge Editing, Knowledge Mechanism of LLMs, and Trustworthy AI.
+
+## <span style="color:#2561a0">📢 News and Events</span>
+- [09/2025] Check our new preprint: [Fine-tuning Done Right in Model Editing](https://arxiv.org/pdf/2509.22072).
+- [08/2025] Invited to present the tutorial "Model Editing in LLMs: Advances and Challenges" at **NLPCC 2025** (Xinjiang) with [Dr. Junfeng Fang](https://scholar.google.com/citations?user=beNNywsAAAAJ&hl).
+- [05/2025] One paper was accepted by **ACL 2025**.
+- [09/2024] One paper was accepted by **EMNLP 2024**.
+- [05/2024] Two paper was accepted by **ACL 2024**.
+
+
+## Preprint
+
+- **Fine-tuning Done Right in Model Editing.** [[Paper](https://arxiv.org/pdf/2509.22072)] <br>
+  **<u>Wanli Yang</u>**, Fei Sun, Rui Tang, Hongyu Zang, Du Su, Qi Cao, Jingang Wang, Huawei Shen, Xueqi Cheng <br>
 
 ## Publications
 
@@ -54,8 +67,3 @@ Hi! I'm a first-year PhD student at Institute of Computing Technology, Chinese A
   The code replication of [LightGCL: Simple Yet Effective Graph Contrastive Learning for Recommendation](https://arxiv.org/abs/2302.08191), ICLR' 23
 
 - **Creating [NKUSE.ICU](https://nkuse.icu/): 南开大学软件学院生存手册 & A website for sharing information about the College of Software at Nankai University, 19 Stars & 4 Forks**
-
-## Coursework
-
-- **Parallel Programming, taught by [prof. Gang Wang](https://cc.nankai.edu.cn/2021/0323/c13619a490377/page.htm) [[Course Project]](https://github.com/wending0417/NKCS-ParallelProgramming)** <br>
-  Aiming at the parallel optimization of Inverted Index Intersection utilizing SIMD, Pthread, OpenMP, MPI, and CUDA
