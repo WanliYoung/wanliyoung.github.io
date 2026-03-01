@@ -12,19 +12,19 @@ redirect_from:
 Hi! I'm a second-year PhD student at Institute of Computing Technology, Chinese Academy of Sciences (ICT, CAS), fortunate to be advised by [Prof. Fei Sun](http://ofey.me/). Previously, I obtained my B.E. in Software Engineering from Nankai University. My research interests include Knowledge Editing, Knowledge Mechanism of LLMs, and Trustworthy AI.
 
 ## <span style="color:#2561a0">📢 News and Events</span>
-- [09/2025] Check our new preprint: [Fine-tuning Done Right in Model Editing](https://arxiv.org/pdf/2509.22072).
+- [09/2025] One paper was accepted by **ICLR 2026**.
 - [08/2025] Invited to present the tutorial "Model Editing in LLMs: Advances and Challenges" at **NLPCC 2025** (Xinjiang) with [Dr. Junfeng Fang](https://scholar.google.com/citations?user=beNNywsAAAAJ&hl).
 - [05/2025] One paper was accepted by **ACL 2025**.
 - [09/2024] One paper was accepted by **EMNLP 2024**.
 - [05/2024] Two papers were accepted by **ACL 2024**.
 
-
-## Preprint
-
-- **Fine-tuning Done Right in Model Editing.** [[Paper](https://arxiv.org/pdf/2509.22072)] <br>
-  **<u>Wanli Yang</u>**, Fei Sun, Rui Tang, Hongyu Zang, Du Su, Qi Cao, Jingang Wang, Huawei Shen, Xueqi Cheng <br>
-
 ## Publications
+
+### 2026
+
+- **Fine-tuning Done Right in Model Editing.** [[Paper](https://openreview.net/pdf?id=cfHuA5jsPt)] [[Code](https://github.com/WanliYoung/FT4Editing)] <br>
+  **<u>Wanli Yang</u>**, Rui Tang, Hongyu Zang, Du Su, Qi Cao, Jingang Wang, Huawei Shen, Xueqi Cheng, Fei Sun <br>
+  **ICLR 2026**
 
 ### 2025
 
