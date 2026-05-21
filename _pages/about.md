@@ -12,11 +12,17 @@ redirect_from:
 Hi! I'm a second-year PhD student at Institute of Computing Technology, Chinese Academy of Sciences (ICT, CAS), fortunate to be advised by [Prof. Fei Sun](http://ofey.me/). Previously, I obtained my B.E. in Software Engineering from Nankai University. My research interests include Knowledge Editing, Knowledge Mechanism of LLMs, and Trustworthy AI.
 
 ## <span style="color:#2561a0">📢 News and Events</span>
-- [09/2025] One paper was accepted by **ICLR 2026**.
+- [05/2026] Check our new preprint: [Beyond Reasoning: Reinforcement Learning Unlocks Parametric Knowledge in LLMs](https://arxiv.org/pdf/2605.07153).
+- [01/2026] One paper was accepted by **ICLR 2026**.
 - [08/2025] Invited to present the tutorial "Model Editing in LLMs: Advances and Challenges" at **NLPCC 2025** (Xinjiang) with [Dr. Junfeng Fang](https://scholar.google.com/citations?user=beNNywsAAAAJ&hl).
 - [05/2025] One paper was accepted by **ACL 2025**.
 - [09/2024] One paper was accepted by **EMNLP 2024**.
 - [05/2024] Two papers were accepted by **ACL 2024**.
+
+## Preprint
+
+- **Beyond Reasoning: Reinforcement Learning Unlocks Parametric Knowledge in LLMs.** [[Paper](https://arxiv.org/pdf/2605.07153)] <br>
+  **<u>Wanli Yang</u>**, Hongyu Zang, Junwei Zhang, Wenjie Shi, Du Su, Jingang Wang, Xueqi Cheng, Fei Sun <br>
 
 ## Publications
 
